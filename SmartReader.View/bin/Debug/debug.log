@@ -1,0 +1,12 @@
+[1020/160855:WARNING:resource_bundle.cc(303)] locale_file_path.empty()
+[1020/160855:FATAL:cef_context.cc(411)] Check failed: !loaded_locale.empty(). Locale could not be found for en-US
+[1020/160903:WARNING:resource_bundle.cc(303)] locale_file_path.empty()
+[1020/160903:FATAL:cef_context.cc(411)] Check failed: !loaded_locale.empty(). Locale could not be found for en-US
+[1020/160907:WARNING:resource_bundle.cc(303)] locale_file_path.empty()
+[1020/160907:FATAL:cef_context.cc(411)] Check failed: !loaded_locale.empty(). Locale could not be found for en-US
+[1020/160930:WARNING:resource_bundle.cc(303)] locale_file_path.empty()
+[1020/160930:FATAL:cef_context.cc(411)] Check failed: !loaded_locale.empty(). Locale could not be found for en-US
+[1020/161000:WARNING:resource_bundle.cc(303)] locale_file_path.empty()
+[1020/161000:FATAL:cef_context.cc(411)] Check failed: !loaded_locale.empty(). Locale could not be found for en-US
+[1020/161013:WARNING:resource_bundle.cc(303)] locale_file_path.empty()
+[1020/161013:FATAL:cef_context.cc(411)] Check failed: !loaded_locale.empty(). Locale could not be found for en-US

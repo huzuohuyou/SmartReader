@@ -1,0 +1,10 @@
+D:\project\CefSharp\CefSharp\bin\Debug\CefSharp.dll
+D:\project\CefSharp\CefSharp\bin\Debug\CefSharp.WinForms.dll
+D:\project\CefSharp\CefSharp\bin\Debug\CefSharp.exe.config
+D:\project\CefSharp\CefSharp\bin\Debug\CefSharp.exe
+D:\project\CefSharp\CefSharp\bin\Debug\CefSharp.pdb
+D:\project\CefSharp\CefSharp\obj\Debug\CefSharp.Form1.resources
+D:\project\CefSharp\CefSharp\obj\Debug\CefSharp.Properties.Resources.resources
+D:\project\CefSharp\CefSharp\obj\Debug\CefSharp.csproj.GenerateResource.Cache
+D:\project\CefSharp\CefSharp\obj\Debug\CefSharp.exe
+D:\project\CefSharp\CefSharp\obj\Debug\CefSharp.pdb

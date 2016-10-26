@@ -1,0 +1,5 @@
+D:\GitLab\wordplugin-frontend\SmartReader\SmartReader.Core\bin\x86\Debug\SmartReader.Core.dll
+D:\GitLab\wordplugin-frontend\SmartReader\SmartReader.Core\bin\x86\Debug\SmartReader.Core.pdb
+D:\GitLab\wordplugin-frontend\SmartReader\SmartReader.Core\obj\x86\Debug\SmartReader.Core.dll
+D:\GitLab\wordplugin-frontend\SmartReader\SmartReader.Core\obj\x86\Debug\SmartReader.Core.pdb
+D:\GitLab\wordplugin-frontend\SmartReader\SmartReader.Core\obj\x86\Debug\SmartReader.Core.csprojResolveAssemblyReference.cache

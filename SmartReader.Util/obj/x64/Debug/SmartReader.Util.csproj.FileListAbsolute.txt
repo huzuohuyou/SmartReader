@@ -1,0 +1,6 @@
+D:\GitLab\SmartReader\SmartReader.Util\bin\x64\Debug\SmartReader.Util.dll
+D:\GitLab\SmartReader\SmartReader.Util\bin\x64\Debug\SmartReader.Util.pdb
+D:\GitLab\SmartReader\SmartReader.Util\obj\x64\Debug\Interop.MSScriptControl.dll
+D:\GitLab\SmartReader\SmartReader.Util\obj\x64\Debug\SmartReader.Util.csproj.ResolveComReference.cache
+D:\GitLab\SmartReader\SmartReader.Util\obj\x64\Debug\SmartReader.Util.dll
+D:\GitLab\SmartReader\SmartReader.Util\obj\x64\Debug\SmartReader.Util.pdb

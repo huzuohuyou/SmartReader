@@ -1,0 +1,11 @@
+D:\project\CefSharp\SmartReader.Util\bin\Debug\SmartReader.Util.dll
+D:\project\CefSharp\SmartReader.Util\bin\Debug\SmartReader.Util.pdb
+D:\project\CefSharp\SmartReader.Util\obj\Debug\SmartReader.Util.csprojResolveAssemblyReference.cache
+D:\project\CefSharp\SmartReader.Util\obj\Debug\SmartReader.Util.dll
+D:\project\CefSharp\SmartReader.Util\obj\Debug\SmartReader.Util.pdb
+D:\GitLab\SmartReader\SmartReader.Util\bin\Debug\SmartReader.Util.dll
+D:\GitLab\SmartReader\SmartReader.Util\bin\Debug\SmartReader.Util.pdb
+D:\GitLab\SmartReader\SmartReader.Util\obj\Debug\Interop.MSScriptControl.dll
+D:\GitLab\SmartReader\SmartReader.Util\obj\Debug\SmartReader.Util.csproj.ResolveComReference.cache
+D:\GitLab\SmartReader\SmartReader.Util\obj\Debug\SmartReader.Util.dll
+D:\GitLab\SmartReader\SmartReader.Util\obj\Debug\SmartReader.Util.pdb

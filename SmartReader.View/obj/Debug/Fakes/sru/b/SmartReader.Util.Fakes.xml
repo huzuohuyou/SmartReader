@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SmartReader.Util.Fakes</name>
+    </assembly>
+    <members>
+        <member name="T:SmartReader.Util.Fakes.ShimJSHelper">
+            <summary>Shim type of SmartReader.Util.JSHelper</summary>
+        </member>
+        <member name="M:SmartReader.Util.Fakes.ShimJSHelper.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:SmartReader.Util.Fakes.ShimJSHelper.#ctor(SmartReader.Util.JSHelper)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="T:SmartReader.Util.Fakes.ShimJSHelper.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="M:SmartReader.Util.Fakes.ShimJSHelper.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:SmartReader.Util.Fakes.ShimJSHelper.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:SmartReader.Util.Fakes.ShimJSHelper.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:SmartReader.Util.Fakes.ShimJSHelper.Constructor">
+            <summary>Sets the shim of JSHelper.JSHelper()</summary>
+        </member>
+        <member name="P:SmartReader.Util.Fakes.ShimJSHelper.ExecuteScriptStringString">
+            <summary>Sets the shim of JSHelper.ExecuteScript(String expression, String code)</summary>
+        </member>
+        <member name="T:SmartReader.Util.Fakes.StubJSHelper">
+            <summary>Stub type of SmartReader.Util.JSHelper</summary>
+        </member>
+        <member name="M:SmartReader.Util.Fakes.StubJSHelper.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="P:SmartReader.Util.Fakes.StubJSHelper.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="M:SmartReader.Util.Fakes.StubJSHelper.InitializeStub">
+            <summary>Initializes a new instance of type StubJSHelper</summary>
+        </member>
+        <member name="P:SmartReader.Util.Fakes.StubJSHelper.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="P:SmartReader.Util.Fakes.StubJSHelper.InstanceObserver">
+            <summary>Gets or sets the instance observer.</summary>
+        </member>
+    </members>
+</doc>

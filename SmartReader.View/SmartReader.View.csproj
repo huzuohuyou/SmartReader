@@ -1,0 +1,1250 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1EB4F065-CA0E-4BB4-A714-DF2B58288054}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SmartReader.View</RootNamespace>
+    <AssemblyName>SmartReader.View</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CefSharp, Version=1.25.0.25466, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\jishu12\Desktop\CefSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="CefSharp.WinForms, Version=1.25.0.25471, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\jishu12\Desktop\CefSharp.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="frmScreenShot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmScreenShot.Designer.cs">
+      <DependentUpon>frmScreenShot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmWHLBrowser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmWHLBrowser.Designer.cs">
+      <DependentUpon>frmWHLBrowser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LifeSpanHandler.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ucGoogle.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucGoogle.Designer.cs">
+      <DependentUpon>ucGoogle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucNavigation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucNavigation.Designer.cs">
+      <DependentUpon>ucNavigation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucPDFList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucPDFList.Designer.cs">
+      <DependentUpon>ucPDFList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucPDFReader.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucPDFReader.Designer.cs">
+      <DependentUpon>ucPDFReader.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucToolBar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ucToolBar.Designer.cs">
+      <DependentUpon>ucToolBar.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="frmScreenShot.resx">
+      <DependentUpon>frmScreenShot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmWHLBrowser.resx">
+      <DependentUpon>frmWHLBrowser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="ucGoogle.resx">
+      <DependentUpon>ucGoogle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucNavigation.resx">
+      <DependentUpon>ucNavigation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucPDFList.resx">
+      <DependentUpon>ucPDFList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucPDFReader.resx">
+      <DependentUpon>ucPDFReader.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucToolBar.resx">
+      <DependentUpon>ucToolBar.cs</DependentUpon>
+    </EmbeddedResource>
+    <Fakes Include="Fakes\SmartReader.Util.fakes" />
+    <None Include="locales\am.pak">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="locales\ar.pak">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="locales\bg.pak">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="locales\bn.pak">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="locales\ca.pak">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="locales\cs.pak">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="locales\da.pak">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="locales\de.pak">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="locales\el.pak">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="locales\en-GB.pak">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="locales\en-US.pak">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="locales\es-419.pak">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="locales\es.pak">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="locales\et.pak">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="locales\fa.pak">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="locales\fi.pak">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="locales\fil.pak">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="locales\fr.pak">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="locales\gu.pak">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="locales\he.pak">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="locales\hi.pak">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="locales\hr.pak">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="locales\hu.pak">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="locales\id.pak">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="locales\it.pak">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="locales\ja.pak">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="locales\kn.pak">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="locales\ko.pak">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="locales\lt.pak">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="locales\lv.pak">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="locales\ml.pak">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="locales\mr.pak">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="locales\ms.pak">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="locales\nb.pak">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="locales\nl.pak">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="locales\pl.pak">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="locales\pt-BR.pak">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="locales\pt-PT.pak">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="locales\ro.pak">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="locales\ru.pak">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="locales\sk.pak">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="locales\sl.pak">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="locales\sr.pak">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="locales\sv.pak">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="locales\sw.pak">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="locales\ta.pak">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="locales\te.pak">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="locales\th.pak">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="locales\tr.pak">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="locales\uk.pak">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="locales\vi.pak">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="locales\zh-CN.pak">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="locales\zh-TW.pak">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\doc\09.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web.config" />
+    <None Include="PDFJSInNet\web\09.pdf" />
+    <None Include="PDFJSInNet\web\cmaps\78-EUC-H.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\78-EUC-V.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\78-H.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\78-RKSJ-H.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\78-RKSJ-V.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\78-V.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\78ms-RKSJ-H.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\78ms-RKSJ-V.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\83pv-RKSJ-H.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\90ms-RKSJ-H.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\90ms-RKSJ-V.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\90msp-RKSJ-H.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\90msp-RKSJ-V.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\90pv-RKSJ-H.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\90pv-RKSJ-V.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\Add-H.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\Add-RKSJ-H.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\Add-RKSJ-V.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\Add-V.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\Adobe-CNS1-0.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\Adobe-CNS1-1.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\Adobe-CNS1-2.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\Adobe-CNS1-3.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\Adobe-CNS1-4.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\Adobe-CNS1-5.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\Adobe-CNS1-6.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\Adobe-CNS1-UCS2.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\Adobe-GB1-0.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\Adobe-GB1-1.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\Adobe-GB1-2.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\Adobe-GB1-3.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\Adobe-GB1-4.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\Adobe-GB1-5.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\Adobe-GB1-UCS2.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\Adobe-Japan1-0.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\Adobe-Japan1-1.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\Adobe-Japan1-2.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\Adobe-Japan1-3.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\Adobe-Japan1-4.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\Adobe-Japan1-5.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\Adobe-Japan1-6.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\Adobe-Japan1-UCS2.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\Adobe-Korea1-0.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\Adobe-Korea1-1.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\Adobe-Korea1-2.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\Adobe-Korea1-UCS2.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\B5-H.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\B5-V.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\B5pc-H.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\B5pc-V.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\CNS-EUC-H.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\CNS-EUC-V.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\CNS1-H.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\CNS1-V.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\CNS2-H.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\CNS2-V.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\ETen-B5-H.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\ETen-B5-V.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\ETenms-B5-H.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\ETenms-B5-V.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\ETHK-B5-H.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\ETHK-B5-V.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\EUC-H.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\EUC-V.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\Ext-H.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\Ext-RKSJ-H.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\Ext-RKSJ-V.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\Ext-V.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\GB-EUC-H.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\GB-EUC-V.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\GB-H.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\GB-V.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\GBK-EUC-H.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\GBK-EUC-V.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\GBK2K-H.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\GBK2K-V.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\GBKp-EUC-H.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\GBKp-EUC-V.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\GBpc-EUC-H.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\GBpc-EUC-V.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\GBT-EUC-H.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\GBT-EUC-V.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\GBT-H.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\GBT-V.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\GBTpc-EUC-H.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\GBTpc-EUC-V.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\H.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\Hankaku.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\Hiragana.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\HKdla-B5-H.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\HKdla-B5-V.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\HKdlb-B5-H.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\HKdlb-B5-V.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\HKgccs-B5-H.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\HKgccs-B5-V.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\HKm314-B5-H.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\HKm314-B5-V.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\HKm471-B5-H.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\HKm471-B5-V.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\HKscs-B5-H.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\HKscs-B5-V.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\Katakana.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\KSC-EUC-H.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\KSC-EUC-V.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\KSC-H.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\KSC-Johab-H.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\KSC-Johab-V.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\KSC-V.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\KSCms-UHC-H.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\KSCms-UHC-HW-H.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\KSCms-UHC-HW-V.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\KSCms-UHC-V.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\KSCpc-EUC-H.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\KSCpc-EUC-V.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\LICENSE">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\NWP-H.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\NWP-V.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\RKSJ-H.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\RKSJ-V.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\Roman.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\UniCNS-UCS2-H.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\UniCNS-UCS2-V.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\UniCNS-UTF16-H.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\UniCNS-UTF16-V.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\UniCNS-UTF32-H.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\UniCNS-UTF32-V.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\UniCNS-UTF8-H.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\UniCNS-UTF8-V.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\UniGB-UCS2-H.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\UniGB-UCS2-V.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\UniGB-UTF16-H.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\UniGB-UTF16-V.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\UniGB-UTF32-H.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\UniGB-UTF32-V.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\UniGB-UTF8-H.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\UniGB-UTF8-V.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\UniJIS-UCS2-H.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\UniJIS-UCS2-HW-H.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\UniJIS-UCS2-HW-V.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\UniJIS-UCS2-V.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\UniJIS-UTF16-H.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\UniJIS-UTF16-V.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\UniJIS-UTF32-H.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\UniJIS-UTF32-V.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\UniJIS-UTF8-H.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\UniJIS-UTF8-V.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\UniJIS2004-UTF16-H.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\UniJIS2004-UTF16-V.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\UniJIS2004-UTF32-H.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\UniJIS2004-UTF32-V.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\UniJIS2004-UTF8-H.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\UniJIS2004-UTF8-V.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\UniJISPro-UCS2-HW-V.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\UniJISPro-UCS2-V.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\UniJISPro-UTF8-V.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\UniJISX0213-UTF32-H.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\UniJISX0213-UTF32-V.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\UniJISX02132004-UTF32-H.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\UniJISX02132004-UTF32-V.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\UniKS-UCS2-H.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\UniKS-UCS2-V.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\UniKS-UTF16-H.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\UniKS-UTF16-V.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\UniKS-UTF32-H.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\UniKS-UTF32-V.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\UniKS-UTF8-H.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\UniKS-UTF8-V.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\V.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\cmaps\WP-Symbol.bcmap">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="PDFJSInNet\web\locale\ach\viewer.properties" />
+    <None Include="PDFJSInNet\web\locale\af\viewer.properties" />
+    <None Include="PDFJSInNet\web\locale\ak\viewer.properties" />
+    <None Include="PDFJSInNet\web\locale\an\viewer.properties" />
+    <None Include="PDFJSInNet\web\locale\ar\viewer.properties" />
+    <None Include="PDFJSInNet\web\locale\ast\viewer.properties" />
+    <None Include="PDFJSInNet\web\locale\as\viewer.properties" />
+    <None Include="PDFJSInNet\web\locale\az\viewer.properties" />
+    <None Include="PDFJSInNet\web\locale\be\viewer.properties" />
+    <None Include="PDFJSInNet\web\locale\bg\viewer.properties" />
+    <None Include="PDFJSInNet\web\locale\bn-BD\viewer.properties" />
+    <None Include="PDFJSInNet\web\locale\bn-IN\viewer.properties" />
+    <None Include="PDFJSInNet\web\locale\br\viewer.properties" />
+    <None Include="PDFJSInNet\web\locale\bs\viewer.properties" />
+    <None Include="PDFJSInNet\web\locale\ca\viewer.properties" />
+    <None Include="PDFJSInNet\web\locale\csb\viewer.properties" />
+    <None Include="PDFJSInNet\web\locale\cs\viewer.properties" />
+    <None Include="PDFJSInNet\web\locale\cy\viewer.properties" />
+    <None Include="PDFJSInNet\web\locale\da\viewer.properties" />
+    <None Include="PDFJSInNet\web\locale\de\viewer.properties" />
+    <None Include="PDFJSInNet\web\locale\el\viewer.properties" />
+    <None Include="PDFJSInNet\web\locale\en-GB\viewer.properties" />
+    <None Include="PDFJSInNet\web\locale\en-US\viewer.properties" />
+    <None Include="PDFJSInNet\web\locale\en-ZA\viewer.properties" />
+    <None Include="PDFJSInNet\web\locale\eo\viewer.properties" />
+    <None Include="PDFJSInNet\web\locale\es-AR\viewer.properties" />
+    <None Include="PDFJSInNet\web\locale\es-CL\viewer.properties" />
+    <None Include="PDFJSInNet\web\locale\es-ES\viewer.properties" />
+    <None Include="PDFJSInNet\web\locale\es-MX\viewer.properties" />
+    <None Include="PDFJSInNet\web\locale\et\viewer.properties" />
+    <None Include="PDFJSInNet\web\locale\eu\viewer.properties" />
+    <None Include="PDFJSInNet\web\locale\fa\viewer.properties" />
+    <None Include="PDFJSInNet\web\locale\ff\viewer.properties" />
+    <None Include="PDFJSInNet\web\locale\fi\viewer.properties" />
+    <None Include="PDFJSInNet\web\locale\fr\viewer.properties" />
+    <None Include="PDFJSInNet\web\locale\fy-NL\viewer.properties" />
+    <None Include="PDFJSInNet\web\locale\ga-IE\viewer.properties" />
+    <None Include="PDFJSInNet\web\locale\gd\viewer.properties" />
+    <None Include="PDFJSInNet\web\locale\gl\viewer.properties" />
+    <None Include="PDFJSInNet\web\locale\gu-IN\viewer.properties" />
+    <None Include="PDFJSInNet\web\locale\he\viewer.properties" />
+    <None Include="PDFJSInNet\web\locale\hi-IN\viewer.properties" />
+    <None Include="PDFJSInNet\web\locale\hr\viewer.properties" />
+    <None Include="PDFJSInNet\web\locale\hu\viewer.properties" />
+    <None Include="PDFJSInNet\web\locale\hy-AM\viewer.properties" />
+    <None Include="PDFJSInNet\web\locale\id\viewer.properties" />
+    <None Include="PDFJSInNet\web\locale\is\viewer.properties" />
+    <None Include="PDFJSInNet\web\locale\it\viewer.properties" />
+    <None Include="PDFJSInNet\web\locale\ja\viewer.properties" />
+    <None Include="PDFJSInNet\web\locale\ka\viewer.properties" />
+    <None Include="PDFJSInNet\web\locale\kk\viewer.properties" />
+    <None Include="PDFJSInNet\web\locale\km\viewer.properties" />
+    <None Include="PDFJSInNet\web\locale\kn\viewer.properties" />
+    <None Include="PDFJSInNet\web\locale\ko\viewer.properties" />
+    <None Include="PDFJSInNet\web\locale\ku\viewer.properties" />
+    <None Include="PDFJSInNet\web\locale\lg\viewer.properties" />
+    <None Include="PDFJSInNet\web\locale\lij\viewer.properties" />
+    <None Include="PDFJSInNet\web\locale\locale.properties" />
+    <None Include="PDFJSInNet\web\locale\lt\viewer.properties" />
+    <None Include="PDFJSInNet\web\locale\lv\viewer.properties" />
+    <None Include="PDFJSInNet\web\locale\mai\viewer.properties" />
+    <None Include="PDFJSInNet\web\locale\mk\viewer.properties" />
+    <None Include="PDFJSInNet\web\locale\ml\viewer.properties" />
+    <None Include="PDFJSInNet\web\locale\mn\viewer.properties" />
+    <None Include="PDFJSInNet\web\locale\mr\viewer.properties" />
+    <None Include="PDFJSInNet\web\locale\ms\viewer.properties" />
+    <None Include="PDFJSInNet\web\locale\my\viewer.properties" />
+    <None Include="PDFJSInNet\web\locale\nb-NO\viewer.properties" />
+    <None Include="PDFJSInNet\web\locale\nl\viewer.properties" />
+    <None Include="PDFJSInNet\web\locale\nn-NO\viewer.properties" />
+    <None Include="PDFJSInNet\web\locale\nso\viewer.properties" />
+    <None Include="PDFJSInNet\web\locale\oc\viewer.properties" />
+    <None Include="PDFJSInNet\web\locale\or\viewer.properties" />
+    <None Include="PDFJSInNet\web\locale\pa-IN\viewer.properties" />
+    <None Include="PDFJSInNet\web\locale\pl\viewer.properties" />
+    <None Include="PDFJSInNet\web\locale\pt-BR\viewer.properties" />
+    <None Include="PDFJSInNet\web\locale\pt-PT\viewer.properties" />
+    <None Include="PDFJSInNet\web\locale\rm\viewer.properties" />
+    <None Include="PDFJSInNet\web\locale\ro\viewer.properties" />
+    <None Include="PDFJSInNet\web\locale\ru\viewer.properties" />
+    <None Include="PDFJSInNet\web\locale\rw\viewer.properties" />
+    <None Include="PDFJSInNet\web\locale\sah\viewer.properties" />
+    <None Include="PDFJSInNet\web\locale\si\viewer.properties" />
+    <None Include="PDFJSInNet\web\locale\sk\viewer.properties" />
+    <None Include="PDFJSInNet\web\locale\sl\viewer.properties" />
+    <None Include="PDFJSInNet\web\locale\son\viewer.properties" />
+    <None Include="PDFJSInNet\web\locale\sq\viewer.properties" />
+    <None Include="PDFJSInNet\web\locale\sr\viewer.properties" />
+    <None Include="PDFJSInNet\web\locale\sv-SE\viewer.properties" />
+    <None Include="PDFJSInNet\web\locale\sw\viewer.properties" />
+    <None Include="PDFJSInNet\web\locale\ta-LK\viewer.properties" />
+    <None Include="PDFJSInNet\web\locale\ta\viewer.properties" />
+    <None Include="PDFJSInNet\web\locale\te\viewer.properties" />
+    <None Include="PDFJSInNet\web\locale\th\viewer.properties" />
+    <None Include="PDFJSInNet\web\locale\tl\viewer.properties" />
+    <None Include="PDFJSInNet\web\locale\tn\viewer.properties" />
+    <None Include="PDFJSInNet\web\locale\tr\viewer.properties" />
+    <None Include="PDFJSInNet\web\locale\uk\viewer.properties" />
+    <None Include="PDFJSInNet\web\locale\ur\viewer.properties" />
+    <None Include="PDFJSInNet\web\locale\vi\viewer.properties" />
+    <None Include="PDFJSInNet\web\locale\wo\viewer.properties" />
+    <None Include="PDFJSInNet\web\locale\xh\viewer.properties" />
+    <None Include="PDFJSInNet\web\locale\zh-CN\viewer.properties" />
+    <None Include="PDFJSInNet\web\locale\zh-TW\viewer.properties" />
+    <None Include="PDFJSInNet\web\locale\zu\viewer.properties" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="CefSharp.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CefSharp.WinForms.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="icudt.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="libcef.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PDFJSInNet\build\pdf.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PDFJSInNet\build\pdf.worker.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PDFJSInNet\web\compatibility.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PDFJSInNet\web\debugger.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PDFJSInNet\web\images\annotation-check.svg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PDFJSInNet\web\images\annotation-comment.svg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PDFJSInNet\web\images\annotation-help.svg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PDFJSInNet\web\images\annotation-insert.svg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PDFJSInNet\web\images\annotation-key.svg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PDFJSInNet\web\images\annotation-newparagraph.svg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PDFJSInNet\web\images\annotation-noicon.svg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PDFJSInNet\web\images\annotation-note.svg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PDFJSInNet\web\images\annotation-paragraph.svg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PDFJSInNet\web\images\findbarButton-next%402x.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PDFJSInNet\web\images\findbarButton-next-rtl%402x.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PDFJSInNet\web\images\findbarButton-next-rtl.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PDFJSInNet\web\images\findbarButton-next.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PDFJSInNet\web\images\findbarButton-previous%402x.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PDFJSInNet\web\images\findbarButton-previous-rtl%402x.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PDFJSInNet\web\images\findbarButton-previous-rtl.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PDFJSInNet\web\images\findbarButton-previous.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PDFJSInNet\web\images\grab.cur">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PDFJSInNet\web\images\grabbing.cur">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PDFJSInNet\web\images\loading-icon.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PDFJSInNet\web\images\loading-small.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PDFJSInNet\web\images\secondaryToolbarButton-documentProperties%402x.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PDFJSInNet\web\images\secondaryToolbarButton-documentProperties.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PDFJSInNet\web\images\secondaryToolbarButton-firstPage%402x.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PDFJSInNet\web\images\secondaryToolbarButton-firstPage.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PDFJSInNet\web\images\secondaryToolbarButton-handTool%402x.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PDFJSInNet\web\images\secondaryToolbarButton-handTool.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PDFJSInNet\web\images\secondaryToolbarButton-lastPage%402x.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PDFJSInNet\web\images\secondaryToolbarButton-lastPage.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PDFJSInNet\web\images\secondaryToolbarButton-rotateCcw%402x.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PDFJSInNet\web\images\secondaryToolbarButton-rotateCcw.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PDFJSInNet\web\images\secondaryToolbarButton-rotateCw%402x.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PDFJSInNet\web\images\secondaryToolbarButton-rotateCw.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PDFJSInNet\web\images\shadow.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PDFJSInNet\web\images\texture.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PDFJSInNet\web\images\toolbarButton-bookmark%402x.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PDFJSInNet\web\images\toolbarButton-bookmark.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PDFJSInNet\web\images\toolbarButton-download%402x.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PDFJSInNet\web\images\toolbarButton-download.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PDFJSInNet\web\images\toolbarButton-menuArrows%402x.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PDFJSInNet\web\images\toolbarButton-menuArrows.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PDFJSInNet\web\images\toolbarButton-openFile%402x.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PDFJSInNet\web\images\toolbarButton-openFile.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PDFJSInNet\web\images\toolbarButton-pageDown%402x.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PDFJSInNet\web\images\toolbarButton-pageDown-rtl%402x.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PDFJSInNet\web\images\toolbarButton-pageDown-rtl.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PDFJSInNet\web\images\toolbarButton-pageDown.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PDFJSInNet\web\images\toolbarButton-pageUp%402x.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PDFJSInNet\web\images\toolbarButton-pageUp-rtl%402x.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PDFJSInNet\web\images\toolbarButton-pageUp-rtl.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PDFJSInNet\web\images\toolbarButton-pageUp.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PDFJSInNet\web\images\toolbarButton-presentationMode%402x.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PDFJSInNet\web\images\toolbarButton-presentationMode.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PDFJSInNet\web\images\toolbarButton-print%402x.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PDFJSInNet\web\images\toolbarButton-print.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PDFJSInNet\web\images\toolbarButton-search%402x.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PDFJSInNet\web\images\toolbarButton-search.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PDFJSInNet\web\images\toolbarButton-secondaryToolbarToggle%402x.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PDFJSInNet\web\images\toolbarButton-secondaryToolbarToggle-rtl%402x.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PDFJSInNet\web\images\toolbarButton-secondaryToolbarToggle-rtl.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PDFJSInNet\web\images\toolbarButton-secondaryToolbarToggle.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PDFJSInNet\web\images\toolbarButton-sidebarToggle%402x.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PDFJSInNet\web\images\toolbarButton-sidebarToggle-rtl%402x.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PDFJSInNet\web\images\toolbarButton-sidebarToggle-rtl.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PDFJSInNet\web\images\toolbarButton-sidebarToggle.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PDFJSInNet\web\images\toolbarButton-viewAttachments%402x.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PDFJSInNet\web\images\toolbarButton-viewAttachments.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PDFJSInNet\web\images\toolbarButton-viewOutline%402x.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PDFJSInNet\web\images\toolbarButton-viewOutline-rtl%402x.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PDFJSInNet\web\images\toolbarButton-viewOutline-rtl.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PDFJSInNet\web\images\toolbarButton-viewOutline.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PDFJSInNet\web\images\toolbarButton-viewThumbnail%402x.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PDFJSInNet\web\images\toolbarButton-viewThumbnail.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PDFJSInNet\web\images\toolbarButton-zoomIn%402x.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PDFJSInNet\web\images\toolbarButton-zoomIn.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PDFJSInNet\web\images\toolbarButton-zoomOut%402x.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PDFJSInNet\web\images\toolbarButton-zoomOut.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PDFJSInNet\web\l10n.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PDFJSInNet\web\viewer.css">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PDFJSInNet\web\viewer.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PDFJSInNet\web\viewer.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="用法.txt" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\SmartReader.Util\SmartReader.Util.csproj">
+      <Project>{4d6a63fa-28a7-47d7-b035-18a09be60363}</Project>
+      <Name>SmartReader.Util</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

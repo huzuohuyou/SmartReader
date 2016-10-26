@@ -1,0 +1,12 @@
+D:\GitLab\SmartReader\SmartReader.View\obj\x64\Debug\Fakes\sru\b\SmartReader.Util.Fakes.xml
+D:\GitLab\SmartReader\SmartReader.View\obj\x64\Debug\Fakes\sru\b\SmartReader.Util.Fakes.dll
+D:\GitLab\SmartReader\SmartReader.View\obj\x64\Debug\Fakes\sru\b\SmartReader.Util.Fakes.pdb
+D:\GitLab\SmartReader\SmartReader.View\obj\x64\Debug\Fakes\sru\b\CefSharp.Core.dll
+D:\GitLab\SmartReader\SmartReader.View\obj\x64\Debug\Fakes\sru\b\CefSharp.dll
+D:\GitLab\SmartReader\SmartReader.View\obj\x64\Debug\Fakes\sru\b\CefSharp.WinForms.dll
+D:\GitLab\SmartReader\SmartReader.View\obj\x64\Debug\Fakes\sru\b\Microsoft.QualityTools.Testing.Fakes.dll
+D:\GitLab\SmartReader\SmartReader.View\obj\x64\Debug\Fakes\sru\b\SmartReader.Util.dll
+D:\GitLab\SmartReader\SmartReader.View\obj\x64\Debug\Fakes\sru\b\SmartReader.Util.pdb
+D:\GitLab\SmartReader\SmartReader.View\obj\x64\Debug\Fakes\sru\o\f.csprojResolveAssemblyReference.cache
+D:\GitLab\SmartReader\SmartReader.View\obj\x64\Debug\Fakes\sru\o\SmartReader.Util.Fakes.dll
+D:\GitLab\SmartReader\SmartReader.View\obj\x64\Debug\Fakes\sru\o\SmartReader.Util.Fakes.pdb
