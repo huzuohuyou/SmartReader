@@ -32,6 +32,7 @@
             System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("回收站                                        ");
             System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Google                                      ");
             System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("PDF阅读器                             ");
+            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("打开");
             this.sc_container = new System.Windows.Forms.SplitContainer();
             this.sc_menu = new System.Windows.Forms.SplitContainer();
             this.btn_Fold = new System.Windows.Forms.Button();
@@ -139,11 +140,14 @@
             treeNode3.Text = "Google                                      ";
             treeNode4.Name = "node_reader";
             treeNode4.Text = "PDF阅读器                             ";
+            treeNode5.Name = "node_open";
+            treeNode5.Text = "打开";
             this.tv_menu.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
             treeNode1,
             treeNode2,
             treeNode3,
-            treeNode4});
+            treeNode4,
+            treeNode5});
             this.tv_menu.ShowLines = false;
             this.tv_menu.Size = new System.Drawing.Size(259, 677);
             this.tv_menu.TabIndex = 0;

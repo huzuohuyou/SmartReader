@@ -83,6 +83,13 @@ namespace SmartReader.View
             }
             
         }
+
+        private void 打开ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog ofd = new OpenFileDialog();
+            ofd.Filter = "网页|*.html";
+            ofd.ShowDialog();
+        }
     }
 
     //internal class LifeSpanHandler : ILifeSpanHandler

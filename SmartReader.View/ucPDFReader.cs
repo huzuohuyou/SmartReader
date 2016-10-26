@@ -29,5 +29,23 @@ namespace SmartReader.View
             }
            
         }
+
+        public ucPDFReader(string path)
+        {
+            try
+            {
+                InitializeComponent();
+                //string path = Application.StartupPath + @"\PDFJSInNet\web\viewer.html";
+                WebView Browser = new WebView();
+                Browser.Address = path;
+                Browser.Parent = this;
+                Browser.Dock = DockStyle.Fill;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+        }
     }
 }

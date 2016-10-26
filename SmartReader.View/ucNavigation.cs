@@ -5,6 +5,7 @@ using System.Drawing;
 using System.Data;
 using System.Text;
 using System.Windows.Forms;
+using System.IO;
 
 namespace SmartReader.View
 {
@@ -55,6 +56,20 @@ namespace SmartReader.View
             else if (tv_menu.SelectedNode.Name == "node_google")
             {
                 control = new ucGoogle();
+            }
+            else if (tv_menu.SelectedNode.Name == "node_open")
+            {
+                OpenFileDialog ofd = new OpenFileDialog();
+                ofd.Filter = "网页|*.html";
+                ofd.ShowDialog();
+                if (File.Exists(ofd.FileName))
+                {
+                    control = new ucPDFReader(ofd.FileName);
+                }
+                else
+                {
+                    return;
+                }
             }
             else
             {

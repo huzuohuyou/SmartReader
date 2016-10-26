@@ -35,8 +35,9 @@
             this.添加文献ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.截图ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.代理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pcontener = new System.Windows.Forms.Panel();
             this.tstb_page = new System.Windows.Forms.ToolStripTextBox();
+            this.pcontener = new System.Windows.Forms.Panel();
+            this.打开ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -46,7 +47,8 @@
             this.资料管理ToolStripMenuItem,
             this.截图ToolStripMenuItem,
             this.代理ToolStripMenuItem,
-            this.tstb_page});
+            this.tstb_page,
+            this.打开ToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(7, 3, 0, 3);
@@ -88,6 +90,12 @@
             this.代理ToolStripMenuItem.Size = new System.Drawing.Size(44, 23);
             this.代理ToolStripMenuItem.Text = "代理";
             // 
+            // tstb_page
+            // 
+            this.tstb_page.Name = "tstb_page";
+            this.tstb_page.Size = new System.Drawing.Size(100, 23);
+            this.tstb_page.TextChanged += new System.EventHandler(this.toolStripTextBox1_TextChanged);
+            // 
             // pcontener
             // 
             this.pcontener.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -96,11 +104,12 @@
             this.pcontener.Size = new System.Drawing.Size(614, 466);
             this.pcontener.TabIndex = 1;
             // 
-            // tstb_page
+            // 打开ToolStripMenuItem
             // 
-            this.tstb_page.Name = "tstb_page";
-            this.tstb_page.Size = new System.Drawing.Size(100, 23);
-            this.tstb_page.TextChanged += new System.EventHandler(this.toolStripTextBox1_TextChanged);
+            this.打开ToolStripMenuItem.Name = "打开ToolStripMenuItem";
+            this.打开ToolStripMenuItem.Size = new System.Drawing.Size(44, 23);
+            this.打开ToolStripMenuItem.Text = "打开";
+            this.打开ToolStripMenuItem.Click += new System.EventHandler(this.打开ToolStripMenuItem_Click);
             // 
             // frmWHLBrowser
             // 
@@ -134,6 +143,7 @@
         private System.Windows.Forms.Panel pcontener;
         private System.Windows.Forms.ToolStripMenuItem 代理ToolStripMenuItem;
         private System.Windows.Forms.ToolStripTextBox tstb_page;
+        private System.Windows.Forms.ToolStripMenuItem 打开ToolStripMenuItem;
     }
 }
 
