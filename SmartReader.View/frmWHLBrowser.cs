@@ -1,9 +1,11 @@
 ﻿using CefSharp.WinForms;
+using SmartReader.Core;
 using SmartReader.Util;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Text;
@@ -89,6 +91,42 @@ namespace SmartReader.View
             OpenFileDialog ofd = new OpenFileDialog();
             ofd.Filter = "网页|*.html";
             ofd.ShowDialog();
+        }
+
+        private void 画图ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void frmWHLBrowser_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            BimtRemotingClient.ShutDown();
+            //Application.Exit();
+            //Process p = GetProcess("Shadowsocks");
+            //if (p != null)
+            //{
+            //    p.Kill();
+            //}
+        }
+        public Process GetProcess(string name)
+        {
+            try
+            {
+                Process[] arrayP = Process.GetProcesses();
+                foreach (Process item in arrayP)
+                {
+                    if (item.ProcessName.Contains(name))
+                    {
+                        return item;
+                    }
+                }
+                return null;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
     }
 

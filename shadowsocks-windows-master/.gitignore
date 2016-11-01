@@ -1,0 +1,14 @@
+/.vs/
+Backup/
+bin/
+obj/
+shadowsocks-csharp/shadowsocks-csharp.csproj.user
+TestResults
+*.suo
+
+shadowsocks-csharp/3rd/*
+!shadowsocks-csharp/3rd/zxing/
+!shadowsocks-csharp/3rd/SimpleJson.cs
+packages/*
+
+shadowsocks-csharp.sln.DotSettings.user

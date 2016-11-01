@@ -1,0 +1,7 @@
+D:\GitHub\SmartReader\SmartReader.Util\bin\Release\SmartReader.Util.dll
+D:\GitHub\SmartReader\SmartReader.Util\bin\Release\SmartReader.Util.pdb
+D:\GitHub\SmartReader\SmartReader.Util\bin\Release\Interop.MSScriptControl.dll
+D:\GitHub\SmartReader\SmartReader.Util\obj\Release\Interop.MSScriptControl.dll
+D:\GitHub\SmartReader\SmartReader.Util\obj\Release\SmartReader.Util.csproj.ResolveComReference.cache
+D:\GitHub\SmartReader\SmartReader.Util\obj\Release\SmartReader.Util.dll
+D:\GitHub\SmartReader\SmartReader.Util\obj\Release\SmartReader.Util.pdb

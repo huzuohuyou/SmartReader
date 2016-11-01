@@ -31,7 +31,7 @@
     <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
+    <OutputPath>..\shadowsocks-windows-master\shadowsocks-csharp\bin\x86\Release\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -39,7 +39,7 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
     <DebugSymbols>true</DebugSymbols>
-    <OutputPath>bin\x86\Debug\</OutputPath>
+    <OutputPath>..\shadowsocks-windows-master\shadowsocks-csharp\bin\x86\Debug\</OutputPath>
     <DefineConstants>DEBUG</DefineConstants>
     <DebugType>full</DebugType>
     <PlatformTarget>x86</PlatformTarget>
@@ -76,6 +76,9 @@
     <ErrorReport>prompt</ErrorReport>
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
     <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="CefSharp, Version=1.25.0.25466, Culture=neutral, processorArchitecture=x86">
@@ -115,6 +118,12 @@
     <Compile Include="ucGoogle.Designer.cs">
       <DependentUpon>ucGoogle.cs</DependentUpon>
     </Compile>
+    <Compile Include="uciTextSharp.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uciTextSharp.Designer.cs">
+      <DependentUpon>uciTextSharp.cs</DependentUpon>
+    </Compile>
     <Compile Include="ucNavigation.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -132,6 +141,12 @@
     </Compile>
     <Compile Include="ucPDFReader.Designer.cs">
       <DependentUpon>ucPDFReader.cs</DependentUpon>
+    </Compile>
+    <Compile Include="uctest.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uctest.Designer.cs">
+      <DependentUpon>uctest.cs</DependentUpon>
     </Compile>
     <Compile Include="ucToolBar.cs">
       <SubType>Form</SubType>
@@ -158,6 +173,9 @@
     <EmbeddedResource Include="ucGoogle.resx">
       <DependentUpon>ucGoogle.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="uciTextSharp.resx">
+      <DependentUpon>uciTextSharp.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ucNavigation.resx">
       <DependentUpon>ucNavigation.cs</DependentUpon>
     </EmbeddedResource>
@@ -166,6 +184,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ucPDFReader.resx">
       <DependentUpon>ucPDFReader.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uctest.resx">
+      <DependentUpon>uctest.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ucToolBar.resx">
       <DependentUpon>ucToolBar.cs</DependentUpon>
@@ -1232,8 +1253,11 @@
     </Content>
     <Content Include="用法.txt" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
+    <ProjectReference Include="..\SmartReader.Core\SmartReader.Core.csproj">
+      <Project>{e83b8825-4385-42d7-bf0f-ebd8b33a5464}</Project>
+      <Name>SmartReader.Core</Name>
+    </ProjectReference>
     <ProjectReference Include="..\SmartReader.Util\SmartReader.Util.csproj">
       <Project>{4d6a63fa-28a7-47d7-b035-18a09be60363}</Project>
       <Name>SmartReader.Util</Name>

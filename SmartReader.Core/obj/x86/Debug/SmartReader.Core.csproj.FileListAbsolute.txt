@@ -5,6 +5,6 @@ D:\GitLab\wordplugin-frontend\SmartReader\SmartReader.Core\obj\x86\Debug\SmartRe
 D:\GitLab\wordplugin-frontend\SmartReader\SmartReader.Core\obj\x86\Debug\SmartReader.Core.csprojResolveAssemblyReference.cache
 D:\GitHub\SmartReader\SmartReader.Core\bin\x86\Debug\SmartReader.Core.dll
 D:\GitHub\SmartReader\SmartReader.Core\bin\x86\Debug\SmartReader.Core.pdb
-D:\GitHub\SmartReader\SmartReader.Core\obj\x86\Debug\SmartReader.Core.csprojResolveAssemblyReference.cache
 D:\GitHub\SmartReader\SmartReader.Core\obj\x86\Debug\SmartReader.Core.dll
 D:\GitHub\SmartReader\SmartReader.Core\obj\x86\Debug\SmartReader.Core.pdb
+D:\GitHub\SmartReader\SmartReader.Core\bin\x86\Debug\RemotingObjects.dll

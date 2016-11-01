@@ -1,0 +1,112 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <ItemGroup />
+  <ItemGroup>
+    <Compile Include="f.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <ProjectGuid>2e82b3a4-e280-4d37-a3ca-1d0bb59a5bfe</ProjectGuid>
+    <!-- update GUID here -->
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace />
+    <!-- update root namespace -->
+    <AssemblyName>SmartReader.Util.Fakes</AssemblyName>
+    <!-- update assembly name -->
+    <CodeContractsEnableRuntimeChecking>True</CodeContractsEnableRuntimeChecking>
+    <CodeContractsRuntimeCheckingLevel>Full</CodeContractsRuntimeCheckingLevel>
+    <OutputPath>b</OutputPath>
+    <IntermediateOutputPath>o</IntermediateOutputPath>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineConstants>DEBUG;TRACE;$(CommonDefineConstants)</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DocumentationFile>$(OutputPath)\$(AssemblyName).xml</DocumentationFile>
+    <NoWarn>1587;1591</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineConstants>TRACE;$(CommonDefineConstants)</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DocumentationFile>$(OutputPath)\$(AssemblyName).xml</DocumentationFile>
+    <NoWarn>1587;1591</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.QualityTools.Testing.Fakes">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <Aliases>mqttf</Aliases>
+    </Reference>
+    <Reference Include="SmartReader.Util">
+      <HintPath>D:\GitHub\SmartReader\SmartReader.Util\bin\Release\SmartReader.Util.dll</HintPath>
+      <Aliases>sru</Aliases>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CefSharp">
+      <HintPath>D:\GitHub\SmartReader\SmartReader.View\CefSharp.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CefSharp.WinForms">
+      <HintPath>D:\GitHub\SmartReader\SmartReader.View\CefSharp.WinForms.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="SmartReader.Core">
+      <HintPath>D:\GitHub\SmartReader\SmartReader.Core\bin\Release\SmartReader.Core.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System.Data">
+      <HintPath>C:\Windows\Microsoft.NET\Framework\v2.0.50727\System.Data.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System.Deployment">
+      <HintPath>C:\Windows\Microsoft.NET\Framework\v2.0.50727\System.Deployment.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System">
+      <HintPath>C:\Windows\Microsoft.NET\Framework\v2.0.50727\System.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <HintPath>C:\Windows\Microsoft.NET\Framework\v2.0.50727\System.Drawing.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <HintPath>C:\Windows\Microsoft.NET\Framework\v2.0.50727\System.Windows.Forms.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System.Xml">
+      <HintPath>C:\Windows\Microsoft.NET\Framework\v2.0.50727\System.Xml.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="RemotingObjects">
+      <HintPath>D:\GitHub\SmartReader\SmartReader.Core\bin\Release\RemotingObjects.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System.Runtime.Remoting">
+      <HintPath>C:\Windows\Microsoft.NET\Framework\v2.0.50727\System.Runtime.Remoting.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Interop.MSScriptControl">
+      <HintPath>D:\GitHub\SmartReader\SmartReader.Util\bin\Release\Interop.MSScriptControl.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.VisualC">
+      <HintPath>C:\Windows\Microsoft.NET\Framework\v2.0.50727\Microsoft.VisualC.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

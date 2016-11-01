@@ -36,8 +36,9 @@
             this.截图ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.代理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tstb_page = new System.Windows.Forms.ToolStripTextBox();
-            this.pcontener = new System.Windows.Forms.Panel();
             this.打开ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.画图ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pcontener = new System.Windows.Forms.Panel();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -48,7 +49,8 @@
             this.截图ToolStripMenuItem,
             this.代理ToolStripMenuItem,
             this.tstb_page,
-            this.打开ToolStripMenuItem});
+            this.打开ToolStripMenuItem,
+            this.画图ToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(7, 3, 0, 3);
@@ -96,6 +98,20 @@
             this.tstb_page.Size = new System.Drawing.Size(100, 23);
             this.tstb_page.TextChanged += new System.EventHandler(this.toolStripTextBox1_TextChanged);
             // 
+            // 打开ToolStripMenuItem
+            // 
+            this.打开ToolStripMenuItem.Name = "打开ToolStripMenuItem";
+            this.打开ToolStripMenuItem.Size = new System.Drawing.Size(44, 23);
+            this.打开ToolStripMenuItem.Text = "打开";
+            this.打开ToolStripMenuItem.Click += new System.EventHandler(this.打开ToolStripMenuItem_Click);
+            // 
+            // 画图ToolStripMenuItem
+            // 
+            this.画图ToolStripMenuItem.Name = "画图ToolStripMenuItem";
+            this.画图ToolStripMenuItem.Size = new System.Drawing.Size(44, 23);
+            this.画图ToolStripMenuItem.Text = "画图";
+            this.画图ToolStripMenuItem.Click += new System.EventHandler(this.画图ToolStripMenuItem_Click);
+            // 
             // pcontener
             // 
             this.pcontener.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -103,13 +119,6 @@
             this.pcontener.Name = "pcontener";
             this.pcontener.Size = new System.Drawing.Size(614, 466);
             this.pcontener.TabIndex = 1;
-            // 
-            // 打开ToolStripMenuItem
-            // 
-            this.打开ToolStripMenuItem.Name = "打开ToolStripMenuItem";
-            this.打开ToolStripMenuItem.Size = new System.Drawing.Size(44, 23);
-            this.打开ToolStripMenuItem.Text = "打开";
-            this.打开ToolStripMenuItem.Click += new System.EventHandler(this.打开ToolStripMenuItem_Click);
             // 
             // frmWHLBrowser
             // 
@@ -125,6 +134,7 @@
             this.Name = "frmWHLBrowser";
             this.Text = "Hailong Wu";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmWHLBrowser_FormClosed);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -144,6 +154,7 @@
         private System.Windows.Forms.ToolStripMenuItem 代理ToolStripMenuItem;
         private System.Windows.Forms.ToolStripTextBox tstb_page;
         private System.Windows.Forms.ToolStripMenuItem 打开ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 画图ToolStripMenuItem;
     }
 }
 

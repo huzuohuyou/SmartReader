@@ -43,40 +43,50 @@ namespace SmartReader.View
 
         private void tv_menu_AfterSelect(object sender, TreeViewEventArgs e)
         {
-            sc_container.Panel2.Controls.Clear();
-            UserControl control = null;
-            if (tv_menu.SelectedNode.Name == "node_reader")
+            try
             {
-                control = new ucPDFReader();
-            }
-            else if (tv_menu.SelectedNode.Name == "node_hsz" || tv_menu.SelectedNode.Name == "node_xxdy")
-            {
-                control = new ucPDFList();
-            }
-            else if (tv_menu.SelectedNode.Name == "node_google")
-            {
-                control = new ucGoogle();
-            }
-            else if (tv_menu.SelectedNode.Name == "node_open")
-            {
-                OpenFileDialog ofd = new OpenFileDialog();
-                ofd.Filter = "网页|*.html";
-                ofd.ShowDialog();
-                if (File.Exists(ofd.FileName))
+                sc_container.Panel2.Controls.Clear();
+                UserControl control = null;
+                control = new uctest();
+                if (tv_menu.SelectedNode.Name == "node_reader")
                 {
-                    control = new ucPDFReader(ofd.FileName);
+                    control = new ucPDFReader();
+                }
+                else if (tv_menu.SelectedNode.Name == "node_hsz" || tv_menu.SelectedNode.Name == "node_xxdy")
+                {
+                    control = new ucPDFList();
+                }
+                else if (tv_menu.SelectedNode.Name == "node_google")
+                {
+                    control = new ucGoogle();
+                }
+                else if (tv_menu.SelectedNode.Name == "node_open")
+                {
+                    OpenFileDialog ofd = new OpenFileDialog();
+                    ofd.Filter = "网页|*.html";
+                    ofd.ShowDialog();
+                    if (File.Exists(ofd.FileName))
+                    {
+                        control = new ucPDFReader(ofd.FileName);
+                    }
+                    else
+                    {
+                        return;
+                    }
                 }
                 else
                 {
                     return;
                 }
+                control.Dock = DockStyle.Fill;
+                sc_container.Panel2.Controls.Add(control);
             }
-            else
+            catch (Exception ex)
             {
-                return;
+
+                MessageBox.Show(ex.ToString());
             }
-            control.Dock = DockStyle.Fill;
-            sc_container.Panel2.Controls.Add(control);
+            
         }
 
 
