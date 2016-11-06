@@ -52,6 +52,10 @@ namespace SmartReader.View
                 {
                     control = new ucPDFReader();
                 }
+                if (tv_menu.SelectedNode.Name == "node_ium")
+                {
+                    control = new ucPDFium();
+                }
                 else if (tv_menu.SelectedNode.Name == "node_hsz" || tv_menu.SelectedNode.Name == "node_xxdy")
                 {
                     control = new ucPDFList();

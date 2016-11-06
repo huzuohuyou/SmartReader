@@ -5,11 +5,14 @@ D:\GitHub\SmartReader\SmartReader.View\obj\x86\Debug\Fakes\sru\b\CefSharp.dll
 D:\GitHub\SmartReader\SmartReader.View\obj\x86\Debug\Fakes\sru\b\CefSharp.WinForms.dll
 D:\GitHub\SmartReader\SmartReader.View\obj\x86\Debug\Fakes\sru\b\Interop.MSScriptControl.dll
 D:\GitHub\SmartReader\SmartReader.View\obj\x86\Debug\Fakes\sru\b\Microsoft.QualityTools.Testing.Fakes.dll
+D:\GitHub\SmartReader\SmartReader.View\obj\x86\Debug\Fakes\sru\b\PdfiumViewer.dll
 D:\GitHub\SmartReader\SmartReader.View\obj\x86\Debug\Fakes\sru\b\RemotingObjects.dll
 D:\GitHub\SmartReader\SmartReader.View\obj\x86\Debug\Fakes\sru\b\SmartReader.Core.dll
 D:\GitHub\SmartReader\SmartReader.View\obj\x86\Debug\Fakes\sru\b\SmartReader.Util.dll
 D:\GitHub\SmartReader\SmartReader.View\obj\x86\Debug\Fakes\sru\b\SmartReader.Util.pdb
+D:\GitHub\SmartReader\SmartReader.View\obj\x86\Debug\Fakes\sru\b\PdfiumViewer.pdb
 D:\GitHub\SmartReader\SmartReader.View\obj\x86\Debug\Fakes\sru\b\SmartReader.Core.pdb
+D:\GitHub\SmartReader\SmartReader.View\obj\x86\Debug\Fakes\sru\b\nl\PdfiumViewer.resources.dll
 D:\GitHub\SmartReader\SmartReader.View\obj\x86\Debug\Fakes\sru\o\f.csprojResolveAssemblyReference.cache
 D:\GitHub\SmartReader\SmartReader.View\obj\x86\Debug\Fakes\sru\o\SmartReader.Util.Fakes.dll
 D:\GitHub\SmartReader\SmartReader.View\obj\x86\Debug\Fakes\sru\o\SmartReader.Util.Fakes.pdb

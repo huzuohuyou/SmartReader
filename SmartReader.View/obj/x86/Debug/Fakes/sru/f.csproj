@@ -8,7 +8,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>9.0.21022</ProductVersion>
-    <ProjectGuid>e24e56bb-3f05-430f-91dd-57b0f6127772</ProjectGuid>
+    <ProjectGuid>b45910c7-3716-4b44-8268-2c0b56ca979d</ProjectGuid>
     <!-- update GUID here -->
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -61,6 +61,10 @@
     </Reference>
     <Reference Include="CefSharp.WinForms">
       <HintPath>D:\GitHub\SmartReader\SmartReader.View\CefSharp.WinForms.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="PdfiumViewer">
+      <HintPath>D:\GitHub\SmartReader\PdfiumViewer\bin\Debug\PdfiumViewer.dll</HintPath>
       <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
     <Reference Include="SmartReader.Core">

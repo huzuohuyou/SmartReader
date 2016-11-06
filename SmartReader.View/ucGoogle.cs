@@ -33,7 +33,8 @@ namespace SmartReader.View
 
             public bool OnBeforePopup(IWebBrowser browser, string url, ref int x, ref int y, ref int width, ref int height)
             {
-                MessageBox.Show(url);
+                browser.Address = url;
+                //MessageBox.Show(url);
                 return true;
             }
 

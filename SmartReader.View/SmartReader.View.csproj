@@ -130,6 +130,12 @@
     <Compile Include="ucNavigation.Designer.cs">
       <DependentUpon>ucNavigation.cs</DependentUpon>
     </Compile>
+    <Compile Include="ucPDFium.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucPDFium.Designer.cs">
+      <DependentUpon>ucPDFium.cs</DependentUpon>
+    </Compile>
     <Compile Include="ucPDFList.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -179,6 +185,9 @@
     <EmbeddedResource Include="ucNavigation.resx">
       <DependentUpon>ucNavigation.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ucPDFium.resx">
+      <DependentUpon>ucPDFium.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ucPDFList.resx">
       <DependentUpon>ucPDFList.cs</DependentUpon>
     </EmbeddedResource>
@@ -192,6 +201,7 @@
       <DependentUpon>ucToolBar.cs</DependentUpon>
     </EmbeddedResource>
     <Fakes Include="Fakes\SmartReader.Util.fakes" />
+    <None Include="App1.config" />
     <None Include="locales\am.pak">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
@@ -1254,6 +1264,10 @@
     <Content Include="用法.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\PdfiumViewer\PdfiumViewer.csproj">
+      <Project>{438914b6-5d1c-482c-b942-5c0e057eef6f}</Project>
+      <Name>PdfiumViewer</Name>
+    </ProjectReference>
     <ProjectReference Include="..\SmartReader.Core\SmartReader.Core.csproj">
       <Project>{e83b8825-4385-42d7-bf0f-ebd8b33a5464}</Project>
       <Name>SmartReader.Core</Name>

@@ -28,12 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("学习单元                                       ");
-            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("回收站                                        ");
-            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Google                                      ");
-            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("PDF阅读器                             ");
-            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("打开");
-            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("iTextSharp");
+            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("学习单元                                       ");
+            System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("回收站                                        ");
+            System.Windows.Forms.TreeNode treeNode10 = new System.Windows.Forms.TreeNode("Google                                      ");
+            System.Windows.Forms.TreeNode treeNode11 = new System.Windows.Forms.TreeNode("PDF阅读器                             ");
+            System.Windows.Forms.TreeNode treeNode12 = new System.Windows.Forms.TreeNode("打开");
+            System.Windows.Forms.TreeNode treeNode13 = new System.Windows.Forms.TreeNode("iTextSharp");
+            System.Windows.Forms.TreeNode treeNode14 = new System.Windows.Forms.TreeNode("PDFIUM");
             this.sc_container = new System.Windows.Forms.SplitContainer();
             this.sc_menu = new System.Windows.Forms.SplitContainer();
             this.btn_Fold = new System.Windows.Forms.Button();
@@ -133,25 +134,28 @@
             this.tv_menu.Location = new System.Drawing.Point(0, 0);
             this.tv_menu.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tv_menu.Name = "tv_menu";
-            treeNode1.Name = "node_xxdy";
-            treeNode1.Text = "学习单元                                       ";
-            treeNode2.Name = "node_hsz";
-            treeNode2.Text = "回收站                                        ";
-            treeNode3.Name = "node_google";
-            treeNode3.Text = "Google                                      ";
-            treeNode4.Name = "node_reader";
-            treeNode4.Text = "PDF阅读器                             ";
-            treeNode5.Name = "node_open";
-            treeNode5.Text = "打开";
-            treeNode6.Name = "node_itextSharp";
-            treeNode6.Text = "iTextSharp";
+            treeNode8.Name = "node_xxdy";
+            treeNode8.Text = "学习单元                                       ";
+            treeNode9.Name = "node_hsz";
+            treeNode9.Text = "回收站                                        ";
+            treeNode10.Name = "node_google";
+            treeNode10.Text = "Google                                      ";
+            treeNode11.Name = "node_reader";
+            treeNode11.Text = "PDF阅读器                             ";
+            treeNode12.Name = "node_open";
+            treeNode12.Text = "打开";
+            treeNode13.Name = "node_itextSharp";
+            treeNode13.Text = "iTextSharp";
+            treeNode14.Name = "node_ium";
+            treeNode14.Text = "PDFIUM";
             this.tv_menu.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode1,
-            treeNode2,
-            treeNode3,
-            treeNode4,
-            treeNode5,
-            treeNode6});
+            treeNode8,
+            treeNode9,
+            treeNode10,
+            treeNode11,
+            treeNode12,
+            treeNode13,
+            treeNode14});
             this.tv_menu.ShowLines = false;
             this.tv_menu.Size = new System.Drawing.Size(259, 677);
             this.tv_menu.TabIndex = 0;
