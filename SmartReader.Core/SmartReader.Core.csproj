@@ -51,6 +51,10 @@
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\jishu12\Desktop\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="RemotingObjects, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>.\RemotingObjects.dll</HintPath>
@@ -58,15 +62,30 @@
     <Reference Include="System" />
     <Reference Include="System.Runtime.Remoting" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BimtRemotingClient.cs" />
+    <Compile Include="Controller\GroupController.cs" />
     <Compile Include="Controller\IController.cs" />
+    <Compile Include="Controller\ICURDable.cs" />
+    <Compile Include="Controller\LiteratureController.cs" />
+    <Compile Include="Controller\Service\DirectoryService.cs" />
+    <Compile Include="Controller\Service\FileService.cs" />
+    <Compile Include="Controller\Service\IService.cs" />
+    <Compile Include="Controller\Service\JsonService.cs" />
+    <Compile Include="Controller\Service\SQLiteService.cs" />
     <Compile Include="Model\BaseModel.cs" />
+    <Compile Include="Model\Group.cs" />
+    <Compile Include="Model\Literature.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utils\Serialize.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Newtonsoft.Json.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="RemotingObjects.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
