@@ -11,5 +11,6 @@ namespace SmartReader.Core.Controller
         bool Delete();
         bool Update();
         DataTable Query();
+        DataTable GetAll();
     }
 }

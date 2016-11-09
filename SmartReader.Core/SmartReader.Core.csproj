@@ -51,9 +51,9 @@
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+    <Reference Include="Newtonsoft.Json.Net20, Version=4.0.2.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Users\jishu12\Desktop\Newtonsoft.Json.dll</HintPath>
+      <HintPath>.\Newtonsoft.Json.Net20.dll</HintPath>
     </Reference>
     <Reference Include="RemotingObjects, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -68,6 +68,8 @@
   <ItemGroup>
     <Compile Include="BimtRemotingClient.cs" />
     <Compile Include="Controller\GroupController.cs" />
+    <Compile Include="Controller\IContainerable.cs" />
+    <Compile Include="Controller\IControl.cs" />
     <Compile Include="Controller\IController.cs" />
     <Compile Include="Controller\ICURDable.cs" />
     <Compile Include="Controller\LiteratureController.cs" />
@@ -83,9 +85,7 @@
     <Compile Include="Utils\Serialize.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Newtonsoft.Json.dll">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    <Content Include="Newtonsoft.Json.Net20.dll" />
     <Content Include="RemotingObjects.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

@@ -34,6 +34,8 @@ namespace PdfiumViewer
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PdfViewer));
             this._container = new System.Windows.Forms.SplitContainer();
+            this._bookmarks = new PdfiumViewer.NativeTreeView();
+            this._renderer = new PdfiumViewer.PdfRenderer();
             this._menuStrip = new System.Windows.Forms.MenuStrip();
             this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pageUpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -43,8 +45,6 @@ namespace PdfiumViewer
             this.zoomOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.printToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this._zoom = new System.Windows.Forms.ToolStripTextBox();
-            this._bookmarks = new PdfiumViewer.NativeTreeView();
-            this._renderer = new PdfiumViewer.PdfRenderer();
             this._container.Panel1.SuspendLayout();
             this._container.Panel2.SuspendLayout();
             this._container.SuspendLayout();
@@ -65,6 +65,28 @@ namespace PdfiumViewer
             // 
             this._container.Panel2.Controls.Add(this._renderer);
             this._container.TabStop = false;
+            // 
+            // _bookmarks
+            // 
+            resources.ApplyResources(this._bookmarks, "_bookmarks");
+            this._bookmarks.ForeColor = System.Drawing.Color.Gainsboro;
+            this._bookmarks.FullRowSelect = true;
+            this._bookmarks.LineColor = System.Drawing.Color.White;
+            this._bookmarks.Name = "_bookmarks";
+            this._bookmarks.ShowLines = false;
+            this._bookmarks.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this._bookmarks_AfterSelect);
+            // 
+            // _renderer
+            // 
+            this._renderer.Cursor = System.Windows.Forms.Cursors.Default;
+            resources.ApplyResources(this._renderer, "_renderer");
+            this._renderer.Name = "_renderer";
+            this._renderer.Page = 0;
+            this._renderer.Rotation = PdfiumViewer.PdfRotation.Rotate0;
+            this._renderer.ZoomMode = PdfiumViewer.PdfViewerZoomMode.FitHeight;
+            //---奇怪每次怎么都没了呢？
+            this._renderer.ZoomChanged += new System.EventHandler(Renderer_ZoomChanged);
+            this._renderer.DisplayRectangleChanged += new System.EventHandler(Renderer_DisplayRectangleChanged);
             // 
             // _menuStrip
             // 
@@ -108,6 +130,7 @@ namespace PdfiumViewer
             resources.ApplyResources(this._page, "_page");
             this._page.KeyDown += new System.Windows.Forms.KeyEventHandler(this.toolStripTextBox1_KeyDown);
             this._page.Click += new System.EventHandler(this._page_Click);
+            this._page.TextChanged += new System.EventHandler(this._page_TextChanged);
             // 
             // toolStripMenuItem1
             // 
@@ -137,28 +160,6 @@ namespace PdfiumViewer
             this._zoom.Name = "_zoom";
             resources.ApplyResources(this._zoom, "_zoom");
             this._zoom.Click += new System.EventHandler(this._zoom_Click);
-            // 
-            // _bookmarks
-            // 
-            resources.ApplyResources(this._bookmarks, "_bookmarks");
-            this._bookmarks.ForeColor = System.Drawing.Color.Gainsboro;
-            this._bookmarks.FullRowSelect = true;
-            this._bookmarks.LineColor = System.Drawing.Color.White;
-            this._bookmarks.Name = "_bookmarks";
-            this._bookmarks.ShowLines = false;
-            this._bookmarks.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this._bookmarks_AfterSelect);
-            // 
-            // _renderer
-            // 
-            this._renderer.Cursor = System.Windows.Forms.Cursors.Default;
-            resources.ApplyResources(this._renderer, "_renderer");
-            this._renderer.Name = "_renderer";
-            this._renderer.Page = 0;
-            this._renderer.Rotation = PdfiumViewer.PdfRotation.Rotate0;
-            this._renderer.ZoomMode = PdfiumViewer.PdfViewerZoomMode.FitHeight;
-            //--whl
-            this._renderer.ZoomChanged += Renderer_ZoomChanged;
-            this._renderer.DisplayRectangleChanged += Renderer_DisplayRectangleChanged;
             // 
             // PdfViewer
             // 

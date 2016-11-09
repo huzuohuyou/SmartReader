@@ -130,18 +130,5 @@ namespace SmartReader.View
         }
     }
 
-    //internal class LifeSpanHandler : ILifeSpanHandler
-    //{
-    //    public void OnBeforeClose(IWebBrowser browser)
-    //    {
-
-    //    }
-
-    //    public bool OnBeforePopup(IWebBrowser browser, string url, ref int x, ref int y, ref int width, ref int height)
-    //    {
-    //        return true;
-    //    }
-
-       
-    //}
+    
 }

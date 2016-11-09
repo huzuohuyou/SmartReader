@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
+using System.IO;
 using System.Text;
 using System.Windows.Forms;
 
@@ -12,6 +13,7 @@ namespace PdfiumViewer
     /// </summary>
     public partial class PdfViewer : UserControl
     {
+        private IRemeberPagable _rember;
         private PdfDocument _document;
         private bool _showBookmarks;
         
@@ -111,6 +113,22 @@ namespace PdfiumViewer
             UpdateEnabled();
             _bookmarks.BackColor = Color.FromArgb(55, 55, 55);
             _renderer.BackColor = Color.FromArgb(62,62,62);
+            _menuStrip.BackColor = Color.FromArgb(71, 71, 71);
+        }
+
+
+        public PdfViewer(IRemeberPagable pRember)
+        {
+            _rember = pRember;
+            DefaultPrintMode = PdfPrintMode.CutMargin;
+
+            InitializeComponent();
+
+            ShowBookmarks = true;
+
+            UpdateEnabled();
+            _bookmarks.BackColor = Color.FromArgb(55, 55, 55);
+            _renderer.BackColor = Color.FromArgb(62, 62, 62);
             _menuStrip.BackColor = Color.FromArgb(71, 71, 71);
         }
 
@@ -258,6 +276,47 @@ namespace PdfiumViewer
             }
         }
 
+        /// <summary>
+        /// 加载pdf文档
+        /// wuhailong
+        /// 2016-11-09
+        /// </summary>
+        /// <param name="Path"></param>
+        public void LoadFile(string Path)
+        {
+            if (File.Exists(Path))
+            {
+                this.Document?.Dispose();
+                this.Document = PdfDocument.Load(this, Path);
+            }
+        }
+
+        /// <summary>
+        /// 打开指定文档并跳转到指定页
+        /// wuhailong
+        /// 2016-11-09
+        /// </summary>
+        /// <param name="Path"></param>
+        /// <param name="page"></param>
+        public void JumptoPage(string Path,int pPage)
+        {
+            if (File.Exists(Path))
+            {
+                this.Document?.Dispose();
+                this.Document = PdfDocument.Load(this, Path);
+                _page.Text = pPage.ToString();
+                int page;
+                if (int.TryParse(_page.Text, out page))
+                    this.Renderer.Page = page - 1;
+            }
+        }
+
+        public int GetPage()
+        {
+            return this.Renderer.Page + 1;
+        }
+
+
         private void openToolStripMenuItem_Click(object sender, EventArgs e)
         {
             using (var form = new OpenFileDialog())
@@ -271,10 +330,7 @@ namespace PdfiumViewer
                     Dispose();
                     return;
                 }
-
-                this.Document?.Dispose();
-                this.Document = PdfDocument.Load(this, form.FileName);
-                ///*renderToBitmapsToolStripMenuItem*/.Enabled = true;
+                LoadFile(form.FileName);
             }
         }
 
@@ -318,6 +374,15 @@ namespace PdfiumViewer
         private void printToolStripMenuItem_MouseHover(object sender, EventArgs e)
         {
             this.BackColor = Color.FromArgb(0, 0, 0);
+        }
+
+        private void _page_TextChanged(object sender, EventArgs e)
+        {
+            if (_rember != null)
+            {
+                _rember.Rember();
+            }
+
         }
     }
 }

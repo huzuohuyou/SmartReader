@@ -28,23 +28,27 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("学习单元                                       ");
-            System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("回收站                                        ");
-            System.Windows.Forms.TreeNode treeNode10 = new System.Windows.Forms.TreeNode("Google                                      ");
-            System.Windows.Forms.TreeNode treeNode11 = new System.Windows.Forms.TreeNode("PDF阅读器                             ");
-            System.Windows.Forms.TreeNode treeNode12 = new System.Windows.Forms.TreeNode("打开");
-            System.Windows.Forms.TreeNode treeNode13 = new System.Windows.Forms.TreeNode("iTextSharp");
-            System.Windows.Forms.TreeNode treeNode14 = new System.Windows.Forms.TreeNode("PDFIUM");
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("学习单元                                       ");
+            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Google                                      ");
+            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("PDF阅读器                             ");
+            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("打开");
+            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("iTextSharp");
+            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("PDFIUM");
             this.sc_container = new System.Windows.Forms.SplitContainer();
             this.sc_menu = new System.Windows.Forms.SplitContainer();
             this.btn_Fold = new System.Windows.Forms.Button();
             this.btn_expend = new System.Windows.Forms.Button();
             this.tv_menu = new System.Windows.Forms.TreeView();
+            this.cms = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.添加分组ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.添加文献ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sc_container.Panel1.SuspendLayout();
             this.sc_container.SuspendLayout();
             this.sc_menu.Panel1.SuspendLayout();
             this.sc_menu.Panel2.SuspendLayout();
             this.sc_menu.SuspendLayout();
+            this.cms.SuspendLayout();
             this.SuspendLayout();
             // 
             // sc_container
@@ -124,6 +128,7 @@
             // tv_menu
             // 
             this.tv_menu.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.tv_menu.ContextMenuStrip = this.cms;
             this.tv_menu.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tv_menu.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.tv_menu.ForeColor = System.Drawing.Color.Gainsboro;
@@ -134,33 +139,55 @@
             this.tv_menu.Location = new System.Drawing.Point(0, 0);
             this.tv_menu.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tv_menu.Name = "tv_menu";
-            treeNode8.Name = "node_xxdy";
-            treeNode8.Text = "学习单元                                       ";
-            treeNode9.Name = "node_hsz";
-            treeNode9.Text = "回收站                                        ";
-            treeNode10.Name = "node_google";
-            treeNode10.Text = "Google                                      ";
-            treeNode11.Name = "node_reader";
-            treeNode11.Text = "PDF阅读器                             ";
-            treeNode12.Name = "node_open";
-            treeNode12.Text = "打开";
-            treeNode13.Name = "node_itextSharp";
-            treeNode13.Text = "iTextSharp";
-            treeNode14.Name = "node_ium";
-            treeNode14.Text = "PDFIUM";
+            treeNode1.Name = "node_xxdy";
+            treeNode1.Text = "学习单元                                       ";
+            treeNode2.Name = "node_google";
+            treeNode2.Text = "Google                                      ";
+            treeNode3.Name = "node_reader";
+            treeNode3.Text = "PDF阅读器                             ";
+            treeNode4.Name = "node_open";
+            treeNode4.Text = "打开";
+            treeNode5.Name = "node_itextSharp";
+            treeNode5.Text = "iTextSharp";
+            treeNode6.Name = "node_ium";
+            treeNode6.Text = "PDFIUM";
             this.tv_menu.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode8,
-            treeNode9,
-            treeNode10,
-            treeNode11,
-            treeNode12,
-            treeNode13,
-            treeNode14});
+            treeNode1,
+            treeNode2,
+            treeNode3,
+            treeNode4,
+            treeNode5,
+            treeNode6});
             this.tv_menu.ShowLines = false;
             this.tv_menu.Size = new System.Drawing.Size(259, 677);
             this.tv_menu.TabIndex = 0;
             this.tv_menu.NodeMouseHover += new System.Windows.Forms.TreeNodeMouseHoverEventHandler(this.tv_menu_NodeMouseHover);
             this.tv_menu.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.tv_menu_AfterSelect);
+            // 
+            // cms
+            // 
+            this.cms.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.添加分组ToolStripMenuItem,
+            this.添加文献ToolStripMenuItem});
+            this.cms.Name = "cms";
+            this.cms.Size = new System.Drawing.Size(153, 70);
+            this.cms.Opening += new System.ComponentModel.CancelEventHandler(this.cms_Opening);
+            // 
+            // 添加分组ToolStripMenuItem
+            // 
+            this.添加分组ToolStripMenuItem.Name = "添加分组ToolStripMenuItem";
+            this.添加分组ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.添加分组ToolStripMenuItem.Text = "添加分组";
+            this.添加分组ToolStripMenuItem.Visible = false;
+            this.添加分组ToolStripMenuItem.Click += new System.EventHandler(this.添加分组ToolStripMenuItem_Click);
+            // 
+            // 添加文献ToolStripMenuItem
+            // 
+            this.添加文献ToolStripMenuItem.Name = "添加文献ToolStripMenuItem";
+            this.添加文献ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.添加文献ToolStripMenuItem.Text = "添加文献";
+            this.添加文献ToolStripMenuItem.Visible = false;
+            this.添加文献ToolStripMenuItem.Click += new System.EventHandler(this.添加文献ToolStripMenuItem_Click);
             // 
             // ucNavigation
             // 
@@ -176,6 +203,7 @@
             this.sc_menu.Panel1.ResumeLayout(false);
             this.sc_menu.Panel2.ResumeLayout(false);
             this.sc_menu.ResumeLayout(false);
+            this.cms.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -187,5 +215,8 @@
         private System.Windows.Forms.Button btn_Fold;
         private System.Windows.Forms.Button btn_expend;
         private System.Windows.Forms.TreeView tv_menu;
+        private System.Windows.Forms.ContextMenuStrip cms;
+        private System.Windows.Forms.ToolStripMenuItem 添加文献ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 添加分组ToolStripMenuItem;
     }
 }

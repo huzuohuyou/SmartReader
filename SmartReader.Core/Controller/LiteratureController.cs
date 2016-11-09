@@ -9,33 +9,49 @@ using System.Windows.Forms;
 
 namespace SmartReader.Core.Controller
 {
-    class LiteratureController : ICURDable
+    public class LiteratureController : ICURDable
     {
         
-        IService service;
+        IService fileService;
+        IService jsonService;
         Literature literature;
         public LiteratureController(Literature l) {
             literature = l;
-            service =new FileService(l);
+            fileService =new FileService(l);
+            jsonService = new JsonService(l);
         }
         public bool Add()
         {
-            return service.Add(); 
+            bool ok = fileService.Add();
+            bool ok2 = jsonService.Add();
+            return ok & ok2;
         }
 
         public bool Delete()
         {
-            return service.Delete();
+            bool ok = fileService.Delete();
+            bool ok2 = jsonService.Delete();
+            return ok & ok2;
+        }
+
+        public DataTable GetAll()
+        {
+            throw new NotImplementedException();
         }
 
         public DataTable Query()
         {
-            return service.Query();
+            throw new NotImplementedException();
+        }
+
+        public Literature QueryLiterature()
+        {
+            return jsonService.QueryLiterature();
         }
 
         public bool Update()
         {
-            return service.Update();
+            return jsonService.Update();
         }
     }
 }

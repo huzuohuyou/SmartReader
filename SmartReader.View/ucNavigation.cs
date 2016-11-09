@@ -6,11 +6,15 @@ using System.Data;
 using System.Text;
 using System.Windows.Forms;
 using System.IO;
+using SmartReader.Core.Controller;
+using SmartReader.Core.Model;
 
 namespace SmartReader.View
 {
-    public partial class ucNavigation : UserControl
+    public partial class ucNavigation : UserControl, IControl, IContainerable
     {
+       
+
         public ucNavigation()
         {
             InitializeComponent();
@@ -19,7 +23,8 @@ namespace SmartReader.View
             btn_expend.BackColor = Color.FromArgb(63,64,69);
             btn_Fold.BackColor = Color.FromArgb(63, 64, 69);
             tv_menu.BackColor = Color.FromArgb(37, 37, 37);
-            
+
+            InitData();
         }
 
         private void btn_expend_Click(object sender, EventArgs e)
@@ -56,9 +61,10 @@ namespace SmartReader.View
                 {
                     control = new ucPDFium();
                 }
-                else if (tv_menu.SelectedNode.Name == "node_hsz" || tv_menu.SelectedNode.Name == "node_xxdy")
-                {
-                    control = new ucPDFList();
+                else if (tv_menu.SelectedNode.Parent != null && tv_menu.SelectedNode.Parent.Name == "node_xxdy")
+                {//.Name == "node_hsz" || tv_menu.SelectedNode.Name == "node_xxdy"
+                    string _parent = tv_menu.SelectedNode.Text;
+                    control = new ucPDFList(_parent,this);
                 }
                 else if (tv_menu.SelectedNode.Name == "node_google")
                 {
@@ -102,6 +108,93 @@ namespace SmartReader.View
                 item.BackColor = Color.FromArgb(37, 37, 37);
             }
             e.Node.BackColor = Color.FromArgb(63, 64, 69);
+        }
+
+        private void 添加分组ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmGroup frm = new frmGroup();
+            if (frm.ShowDialog() == DialogResult.OK)
+            {
+                TreeNode _tr = tv_menu.Nodes["node_xxdy"];
+                TreeNode _newGroupNode = new TreeNode();
+                _newGroupNode.Text = frm.GetGroupName();
+                _newGroupNode.Name = frm.GetGroupName();
+                _tr.Nodes.Add(_newGroupNode);
+                Group _group = new Group(frm.GetGroupName());
+                GroupController _controller = new GroupController(_group);
+                _controller.Add();
+            }
+            
+            
+        }
+
+        private void 添加文献ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            using (OpenFileDialog ofd = new OpenFileDialog())
+            {
+                ofd.Filter = "pdf|*.pdf";
+                ofd.ShowDialog();
+                if (File.Exists(ofd.FileName))
+                {
+                    string _parent = tv_menu.SelectedNode.Text;
+                    FileInfo _fi = new FileInfo(ofd.FileName);
+                    Literature _literature = new Literature(_fi.Name, DateTime.Now.ToShortDateString(), "1", _parent, ofd.FileName);
+                    LiteratureController _controller = new LiteratureController(_literature);
+                    _controller.Add();
+                }
+            }
+        }
+
+        private void cms_Opening(object sender, CancelEventArgs e)
+        {
+            string _name = tv_menu.SelectedNode.Text;
+            if (_name.Trim()=="学习单元")
+            {
+                cms.Visible = true;
+                添加分组ToolStripMenuItem.Visible = true;
+                添加文献ToolStripMenuItem.Visible = false;
+            }
+            else if (tv_menu.SelectedNode.Parent!=null)
+            {
+                cms.Visible = true;
+                添加分组ToolStripMenuItem.Visible = false;
+                添加文献ToolStripMenuItem.Visible = true;
+            }
+            else
+            {
+                cms.Visible = false;
+                添加分组ToolStripMenuItem.Visible = false;
+                添加文献ToolStripMenuItem.Visible = false;
+            }
+        }
+
+        public void InitData()
+        {
+            GroupController _controller = new GroupController();
+            DataTable _dt = _controller.GetAll();
+            TreeNode _tr = tv_menu.Nodes["node_xxdy"];
+            foreach (DataRow item in _dt.Rows)
+            {
+                
+                TreeNode _newGroupNode = new TreeNode();
+                _newGroupNode.Text = item["group"].ToString();
+                _newGroupNode.Name = item["group"].ToString();
+                _tr.Nodes.Add(_newGroupNode);
+            }
+        }
+
+        public void Fresh()
+        {
+            throw new NotImplementedException();
+        }
+
+        
+
+        public void SetItem(UserControl uc)
+        {
+            sc_container.Panel2.Controls.Clear();
+            uc.Dock = DockStyle.Fill;
+            sc_container.Panel2.Controls.Add(uc);
         }
     }
 }

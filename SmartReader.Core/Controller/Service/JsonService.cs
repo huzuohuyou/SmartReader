@@ -10,7 +10,7 @@ namespace SmartReader.Core.Controller.Service
 {
     class JsonService:IService
     {
-        private static readonly string path = Environment.GetFolderPath(Environment.SpecialFolder.Personal) + "\\SmartReader\\{0}.json";
+        private static readonly string path = Environment.GetFolderPath(Environment.SpecialFolder.Personal) + "\\SmartReader\\{0}\\{1}.json";
         Literature literature;
         Serialize<Literature> serialize = new Serialize<Literature>();
         public JsonService(Literature l) {
@@ -30,23 +30,42 @@ namespace SmartReader.Core.Controller.Service
         public bool Add()
         {
             string json = serialize.DoSerialize(literature);
-            File.WriteAllText(string.Format(path,literature.Title),json);
+            File.WriteAllText(string.Format(path,literature.GetParent(), literature.GetTitle()),json);
             return true;
         }
 
         public bool Delete()
         {
-            throw new NotImplementedException();
+            string _path = string.Format(path,literature.GetParent(), literature.GetTitle());
+            if (File.Exists(_path))
+            {
+                File.Delete(_path);
+                return true;
+            }
+            return false;
         }
 
         public bool Update()
         {
-            throw new NotImplementedException();
+            string json = serialize.DoSerialize(literature);
+            File.WriteAllText(string.Format(path,literature.GetParent(), literature.GetTitle()), json);
+            return true;
         }
 
         public DataTable Query()
         {
             throw new NotImplementedException();
+        }
+
+        public Literature QueryLiterature()
+        {
+            string _path = string.Format(path,literature.GetParent(), literature.GetTitle());
+            if (!File.Exists(_path))
+            {
+                return null;
+            }
+            string json = File.ReadAllText(_path);
+            return serialize.DeSerialize(json);
         }
 
         public DataTable GetAll()

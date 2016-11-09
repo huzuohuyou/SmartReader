@@ -30,9 +30,10 @@
         {
             this.dgv_info = new System.Windows.Forms.DataGridView();
             this.title = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.schedule = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.author = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lasttime = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.source = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.parent = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Progress = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lRTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_info)).BeginInit();
             this.SuspendLayout();
             // 
@@ -43,9 +44,10 @@
             this.dgv_info.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_info.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.title,
-            this.schedule,
-            this.author,
-            this.lasttime});
+            this.source,
+            this.parent,
+            this.Progress,
+            this.lRTime});
             this.dgv_info.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgv_info.Location = new System.Drawing.Point(0, 0);
             this.dgv_info.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
@@ -53,35 +55,50 @@
             this.dgv_info.ReadOnly = true;
             this.dgv_info.RowHeadersWidth = 10;
             this.dgv_info.RowTemplate.Height = 23;
+            this.dgv_info.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_info.Size = new System.Drawing.Size(953, 598);
             this.dgv_info.TabIndex = 1;
+            this.dgv_info.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_info_CellDoubleClick);
             // 
             // title
             // 
+            this.title.DataPropertyName = "title";
             this.title.FillWeight = 300F;
-            this.title.HeaderText = "题目";
+            this.title.HeaderText = "文献";
             this.title.Name = "title";
             this.title.ReadOnly = true;
             this.title.Width = 300;
             // 
-            // schedule
+            // source
             // 
-            this.schedule.HeaderText = "进度";
-            this.schedule.Name = "schedule";
-            this.schedule.ReadOnly = true;
+            this.source.DataPropertyName = "source";
+            this.source.HeaderText = "source";
+            this.source.Name = "source";
+            this.source.ReadOnly = true;
+            this.source.Visible = false;
             // 
-            // author
+            // parent
             // 
-            this.author.HeaderText = "出版年";
-            this.author.Name = "author";
-            this.author.ReadOnly = true;
+            this.parent.DataPropertyName = "parent";
+            this.parent.HeaderText = "parent";
+            this.parent.Name = "parent";
+            this.parent.ReadOnly = true;
+            this.parent.Visible = false;
             // 
-            // lasttime
+            // Progress
             // 
-            this.lasttime.HeaderText = "上次阅读时间";
-            this.lasttime.Name = "lasttime";
-            this.lasttime.ReadOnly = true;
-            this.lasttime.Width = 200;
+            this.Progress.DataPropertyName = "Progress";
+            this.Progress.HeaderText = "阅读页码";
+            this.Progress.Name = "Progress";
+            this.Progress.ReadOnly = true;
+            // 
+            // lRTime
+            // 
+            this.lRTime.DataPropertyName = "lRTime";
+            this.lRTime.HeaderText = "上次阅读时间";
+            this.lRTime.Name = "lRTime";
+            this.lRTime.ReadOnly = true;
+            this.lRTime.Width = 200;
             // 
             // ucPDFList
             // 
@@ -101,8 +118,9 @@
 
         private System.Windows.Forms.DataGridView dgv_info;
         private System.Windows.Forms.DataGridViewTextBoxColumn title;
-        private System.Windows.Forms.DataGridViewTextBoxColumn schedule;
-        private System.Windows.Forms.DataGridViewTextBoxColumn author;
-        private System.Windows.Forms.DataGridViewTextBoxColumn lasttime;
+        private System.Windows.Forms.DataGridViewTextBoxColumn source;
+        private System.Windows.Forms.DataGridViewTextBoxColumn parent;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Progress;
+        private System.Windows.Forms.DataGridViewTextBoxColumn lRTime;
     }
 }

@@ -19,25 +19,20 @@ namespace SmartReader.Core.Controller.Service
         }
         public bool Add()
         {
-            using (ofd = new OpenFileDialog())
+            if (File.Exists(literature.GetSource()))
             {
-                ofd.Filter = "PDF|*.pdf";
-                ofd.ShowDialog();
-                if (File.Exists(ofd.FileName))
-                {
-                    FileInfo fi = new FileInfo(ofd.FileName);
-                    File.Copy(ofd.FileName, string.Format(baseDir + "\\{1}", literature.Parent, fi.Name));
-                    return true;
-                }
+                FileInfo fi = new FileInfo(literature.GetSource());
+                File.Copy(literature.GetSource(), string.Format(baseDir + "\\{1}", literature.GetParent(), fi.Name));
+                return true;
             }
             return false;
         }
 
         public bool Delete()
         {
-            if (File.Exists(literature.Source))
+            if (File.Exists(literature.GetSource()))
             {
-                File.Delete(literature.Source);
+                File.Delete(literature.GetSource());
                 return true;
             }
             return false;
@@ -50,18 +45,18 @@ namespace SmartReader.Core.Controller.Service
 
         public DataTable Query()
         {
-            DataTable dt = new DataTable();
-            dt.Columns.Add("title");
-            dt.Columns.Add("lRTime");
-            dt.Columns.Add("Progress");
-            dt.Columns.Add("parent");
-            dt.Columns.Add("source");
+            throw new NotImplementedException();
         }
 
-        public Literature Query()
+        public Literature QueryLiterature()
         {
             throw new NotImplementedException();
         }
+
+        //public Literature QueryLiterature()
+        //{
+        //    throw new NotImplementedException();
+        //}
 
         public bool Update()
         {

@@ -5,7 +5,7 @@ using System.Text;
 
 namespace SmartReader.Core.Model
 {
-    class Literature
+    public class Literature
     {
         [JsonProperty("title")]
         string title;
@@ -18,7 +18,7 @@ namespace SmartReader.Core.Model
         /// 阅读进度即阅读的页码
         /// </summary>
         [JsonProperty("Progress")]
-        string Progress;
+        string progress;
         /// <summary>
         /// 所属哪个组别下的文献
         /// </summary>
@@ -30,43 +30,46 @@ namespace SmartReader.Core.Model
         [JsonProperty("source")]
         string source;
 
-        public string Parent
+        public string GetProgress()
         {
-            get
-            {
+            return progress;
+        }
+
+        public string GetLRTime()
+        {
+                return lRTime;
+        }
+
+        public Literature(string pTitle, string pLRTime, string pProgress, string pParent, string pSource)
+        {
+            title = pTitle;
+            lRTime = pLRTime;
+            progress = pProgress;
+            parent = pParent;
+            source = pSource;
+        }
+
+        public string GetParent()
+        {
+            
                 return parent;
-            }
-
-            set
-            {
-                parent = value;
-            }
+            
         }
 
-        public string Source
+        public string GetSource()
         {
-            get
-            {
+            
                 return source;
-            }
-
-            set
-            {
-                source = value;
-            }
         }
 
-        public string Title
+        public string GetTitle()
         {
-            get
-            {
                 return title;
-            }
+        }
 
-            set
-            {
-                title = value;
-            }
+        internal string getProgress()
+        {
+            return progress;
         }
     }
 }

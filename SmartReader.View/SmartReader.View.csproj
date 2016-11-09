@@ -97,6 +97,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmGroup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGroup.Designer.cs">
+      <DependentUpon>frmGroup.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmScreenShot.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -117,6 +123,12 @@
     </Compile>
     <Compile Include="ucGoogle.Designer.cs">
       <DependentUpon>ucGoogle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucGroup.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucGroup.Designer.cs">
+      <DependentUpon>ucGroup.cs</DependentUpon>
     </Compile>
     <Compile Include="uciTextSharp.cs">
       <SubType>UserControl</SubType>
@@ -160,6 +172,9 @@
     <Compile Include="ucToolBar.Designer.cs">
       <DependentUpon>ucToolBar.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="frmGroup.resx">
+      <DependentUpon>frmGroup.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmScreenShot.resx">
       <DependentUpon>frmScreenShot.cs</DependentUpon>
     </EmbeddedResource>
@@ -178,6 +193,9 @@
     </Compile>
     <EmbeddedResource Include="ucGoogle.resx">
       <DependentUpon>ucGoogle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucGroup.resx">
+      <DependentUpon>ucGroup.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="uciTextSharp.resx">
       <DependentUpon>uciTextSharp.cs</DependentUpon>

@@ -11,6 +11,9 @@ namespace SmartReader.Core.Controller.Service
     {
         private static readonly string baseDir =  Environment.GetFolderPath(Environment.SpecialFolder.Personal)+"\\SmartReader\\" ;
         Group group;
+        public DirectoryService()
+        {
+        }
         public DirectoryService(Group g) {
             group = g;
 
@@ -18,7 +21,7 @@ namespace SmartReader.Core.Controller.Service
 
         public bool Add()
         {
-            string dir = string.Format(baseDir, group.Name);
+            string dir = string.Format(baseDir+"{0}", group.Name);
             if (!Directory.Exists(dir))
             {
                 Directory.CreateDirectory(dir);
@@ -50,7 +53,8 @@ namespace SmartReader.Core.Controller.Service
             string[] groups = Directory.GetDirectories(baseDir);
             foreach (var item in groups)
             {
-                dt.Rows.Add(item);
+                DirectoryInfo _di = new DirectoryInfo(item);
+                dt.Rows.Add(_di.Name);
             }
             return dt;
         }
@@ -67,9 +71,21 @@ namespace SmartReader.Core.Controller.Service
             foreach (var item in literatures)
             {
                 FileInfo fi = new FileInfo(item);
-                dt.Rows.Add(fi.Name,null,null,null,item);
+                if (fi.Extension==".pdf")
+                {
+                    Literature _temp = new Literature(fi.Name, null, null, group.Name, null);
+                    JsonService _jsonService = new JsonService(_temp);
+                    Literature _literature = _jsonService.QueryLiterature();
+                    dt.Rows.Add(_literature.GetTitle(), _literature.GetLRTime(), _literature.getProgress(), _literature.GetParent(), item);
+                }
+               
             }
             return dt;
+        }
+
+        public Literature QueryLiterature()
+        {
+            throw new NotImplementedException();
         }
 
         public bool Update()

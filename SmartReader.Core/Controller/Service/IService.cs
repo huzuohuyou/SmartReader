@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SmartReader.Core.Model;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Text;
@@ -12,5 +13,6 @@ namespace SmartReader.Core.Controller.Service
         bool Update();
         DataTable Query();
         DataTable GetAll();
+        Literature QueryLiterature();
     }
 }

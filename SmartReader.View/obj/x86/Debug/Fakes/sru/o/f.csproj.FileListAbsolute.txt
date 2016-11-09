@@ -5,6 +5,7 @@ D:\GitHub\SmartReader\SmartReader.View\obj\x86\Debug\Fakes\sru\b\CefSharp.dll
 D:\GitHub\SmartReader\SmartReader.View\obj\x86\Debug\Fakes\sru\b\CefSharp.WinForms.dll
 D:\GitHub\SmartReader\SmartReader.View\obj\x86\Debug\Fakes\sru\b\Interop.MSScriptControl.dll
 D:\GitHub\SmartReader\SmartReader.View\obj\x86\Debug\Fakes\sru\b\Microsoft.QualityTools.Testing.Fakes.dll
+D:\GitHub\SmartReader\SmartReader.View\obj\x86\Debug\Fakes\sru\b\Newtonsoft.Json.Net20.dll
 D:\GitHub\SmartReader\SmartReader.View\obj\x86\Debug\Fakes\sru\b\PdfiumViewer.dll
 D:\GitHub\SmartReader\SmartReader.View\obj\x86\Debug\Fakes\sru\b\RemotingObjects.dll
 D:\GitHub\SmartReader\SmartReader.View\obj\x86\Debug\Fakes\sru\b\SmartReader.Core.dll

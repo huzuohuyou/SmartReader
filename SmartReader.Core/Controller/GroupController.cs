@@ -7,34 +7,43 @@ using System.Text;
 
 namespace SmartReader.Core.Controller
 {
-    class GroupController : ICURDable
+    public class GroupController : ICURDable
     {
-        IService service ;
+        IService directoryService ;
         Group group;
 
+        public GroupController()
+        {
+            directoryService = new DirectoryService(group);
+        }
         public GroupController(Group g) {
             group = g;
-            service = new DirectoryService(group);
+            directoryService = new DirectoryService(group);
         }
 
         public bool Add()
         {
-            return service.Add();
+            return directoryService.Add();
         }
 
         public bool Delete()
         {
-            return service.Delete();
+            return directoryService.Delete();
         }
 
         public DataTable Query()
         {
-            return service.Query();
+            return directoryService.Query();
+        }
+
+        public DataTable GetAll()
+        {
+            return directoryService.GetAll();
         }
 
         public bool Update()
         {
-            return service.Update();
+            return directoryService.Update();
         }
     }
 }

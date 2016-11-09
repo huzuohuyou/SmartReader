@@ -1,8 +1,6 @@
-﻿using PdfiumViewer;
-
-namespace SmartReader.View
+﻿namespace SmartReader.View
 {
-    partial class ucPDFium
+    partial class ucGroup
     {
         /// <summary> 
         /// Required designer variable.
@@ -32,12 +30,14 @@ namespace SmartReader.View
         {
             this.SuspendLayout();
             // 
-            // ucPDFium
+            // ucGroup
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Name = "ucPDFium";
-            this.Size = new System.Drawing.Size(983, 501);
+            this.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Name = "ucGroup";
+            this.Size = new System.Drawing.Size(427, 58);
             this.ResumeLayout(false);
 
         }

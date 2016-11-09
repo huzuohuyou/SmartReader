@@ -8,7 +8,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>9.0.21022</ProductVersion>
-    <ProjectGuid>b45910c7-3716-4b44-8268-2c0b56ca979d</ProjectGuid>
+    <ProjectGuid>1e557f30-aa0f-462b-bbf4-be0efc531043</ProjectGuid>
     <!-- update GUID here -->
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -101,6 +101,10 @@
     </Reference>
     <Reference Include="RemotingObjects">
       <HintPath>D:\GitHub\SmartReader\SmartReader.Core\bin\x86\Debug\RemotingObjects.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Newtonsoft.Json.Net20">
+      <HintPath>D:\GitHub\SmartReader\SmartReader.Core\bin\x86\Debug\Newtonsoft.Json.Net20.dll</HintPath>
       <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
     <Reference Include="Interop.MSScriptControl">
