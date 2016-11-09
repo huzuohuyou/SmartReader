@@ -9,10 +9,14 @@ SmartReader是一款使用cefsharp+pdf.js作为核心架构开发的pdf阅读器
  * 删除文献
   * 修改文献
   * 修改文献分组
+  ![image](https://github.com/huzuohuyou/SmartReader/blob/master/doc/reading.jpg)
 * Google学术搜索
   * shadowsocket开源代理软件+比美特接口
+
 * pdf文献阅读
   * 文献阅读进度
+    ![image](https://github.com/huzuohuyou/SmartReader/blob/master/doc/xuexidanyuan.jpg)
+    
 * 学习笔记
   * 添加截图笔记
   * 编辑截图笔记
