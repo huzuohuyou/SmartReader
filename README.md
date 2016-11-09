@@ -12,11 +12,9 @@ SmartReader是一款使用cefsharp+pdf.js作为核心架构开发的pdf阅读器
   ![image](https://github.com/huzuohuyou/SmartReader/blob/master/doc/reading.jpg)
 * Google学术搜索
   * shadowsocket开源代理软件+比美特接口
-
 * pdf文献阅读
   * 文献阅读进度
     ![image](https://github.com/huzuohuyou/SmartReader/blob/master/doc/xuexidanyuan.jpg)
-    
 * 学习笔记
   * 添加截图笔记
   * 编辑截图笔记
@@ -25,6 +23,7 @@ SmartReader是一款使用cefsharp+pdf.js作为核心架构开发的pdf阅读器
 ###系统要求
 * xp以上
 * 运行环境.net 4.0 、.net 2.0
+
 ###快速入门
 * 请允许360提示的软件一切提示，否则会影响软件的功能使用；
 
