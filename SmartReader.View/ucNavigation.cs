@@ -25,6 +25,7 @@ namespace SmartReader.View
             tv_menu.BackColor = Color.FromArgb(37, 37, 37);
 
             InitData();
+            tv_menu.ExpandAll();
         }
 
         private void btn_expend_Click(object sender, EventArgs e)
@@ -195,6 +196,11 @@ namespace SmartReader.View
             sc_container.Panel2.Controls.Clear();
             uc.Dock = DockStyle.Fill;
             sc_container.Panel2.Controls.Add(uc);
+        }
+
+        private void ucNavigation_SizeChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

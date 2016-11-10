@@ -84,9 +84,8 @@ namespace PdfiumViewer
             this._renderer.Page = 0;
             this._renderer.Rotation = PdfiumViewer.PdfRotation.Rotate0;
             this._renderer.ZoomMode = PdfiumViewer.PdfViewerZoomMode.FitHeight;
-            //---奇怪每次怎么都没了呢？
-            this._renderer.ZoomChanged += new System.EventHandler(Renderer_ZoomChanged);
-            this._renderer.DisplayRectangleChanged += new System.EventHandler(Renderer_DisplayRectangleChanged);
+            this._renderer.ZoomChanged += new System.EventHandler(this.Renderer_ZoomChanged);
+            this._renderer.DisplayRectangleChanged += new System.EventHandler(this.Renderer_DisplayRectangleChanged);
             // 
             // _menuStrip
             // 
@@ -168,6 +167,7 @@ namespace PdfiumViewer
             this.Controls.Add(this._container);
             this.Controls.Add(this._menuStrip);
             this.Name = "PdfViewer";
+            this.SizeChanged += new System.EventHandler(this.PdfViewer_SizeChanged);
             this._container.Panel1.ResumeLayout(false);
             this._container.Panel2.ResumeLayout(false);
             this._container.ResumeLayout(false);

@@ -54,7 +54,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(7, 3, 0, 3);
-            this.menuStrip1.Size = new System.Drawing.Size(614, 29);
+            this.menuStrip1.Size = new System.Drawing.Size(1008, 29);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -117,14 +117,14 @@
             this.pcontener.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pcontener.Location = new System.Drawing.Point(0, 29);
             this.pcontener.Name = "pcontener";
-            this.pcontener.Size = new System.Drawing.Size(614, 466);
+            this.pcontener.Size = new System.Drawing.Size(1008, 704);
             this.pcontener.TabIndex = 1;
             // 
             // frmWHLBrowser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(614, 495);
+            this.ClientSize = new System.Drawing.Size(1008, 733);
             this.Controls.Add(this.pcontener);
             this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -133,7 +133,6 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmWHLBrowser";
             this.Text = "Hailong Wu";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmWHLBrowser_FormClosed);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip1.ResumeLayout(false);

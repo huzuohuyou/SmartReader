@@ -23,17 +23,17 @@ namespace PdfiumViewer
         [DefaultValue(null)]
         public PdfDocument Document
         {
-            get { return _document; }
+            get { return _Document; }
             set
             {
-                if (_document != value)
+                if (_Document != value)
                 {
-                    _document = value;
+                    _Document = value;
 
-                    if (_document != null)
+                    if (_Document != null)
                     {
                         UpdateBookmarks();
-                        _renderer.Load(_document);
+                        _renderer.Load(_Document);
                     }
 
                     UpdateEnabled();
@@ -83,9 +83,22 @@ namespace PdfiumViewer
             }
         }
 
+        public PdfDocument _Document
+        {
+            get
+            {
+                return _document;
+            }
+
+            set
+            {
+                _document = value;
+            }
+        }
+
         private void UpdateBookmarks()
         {
-            bool visible = _showBookmarks && _document != null && _document.Bookmarks.Count > 0;
+            bool visible = _showBookmarks && _Document != null && _Document.Bookmarks.Count > 0;
 
             _container.Panel1Collapsed = !visible;
 
@@ -94,7 +107,7 @@ namespace PdfiumViewer
                 _container.Panel1Collapsed = false;
 
                 _bookmarks.Nodes.Clear();
-                foreach (var bookmark in _document.Bookmarks)
+                foreach (var bookmark in _Document.Bookmarks)
                     _bookmarks.Nodes.Add(GetBookmarkNode(bookmark));
             }
         }
@@ -161,7 +174,7 @@ namespace PdfiumViewer
                 {
                     try
                     {
-                        _document.Save(form.FileName);
+                        _Document.Save(form.FileName);
                     }
                     catch
                     {
@@ -180,19 +193,19 @@ namespace PdfiumViewer
         private void _printButton_Click(object sender, EventArgs e)
         {
             using (var form = new PrintDialog())
-            using (var document = _document.CreatePrintDocument(DefaultPrintMode))
+            using (var document = _Document.CreatePrintDocument(DefaultPrintMode))
             {
                 form.AllowSomePages = true;
                 form.Document = document;
                 form.UseEXDialog = true;
                 form.Document.PrinterSettings.FromPage = 1;
-                form.Document.PrinterSettings.ToPage = _document.PageCount;
+                form.Document.PrinterSettings.ToPage = _Document.PageCount;
 
                 if (form.ShowDialog(FindForm()) == DialogResult.OK)
                 {
                     try
                     {
-                        if (form.Document.PrinterSettings.FromPage <= _document.PageCount)
+                        if (form.Document.PrinterSettings.FromPage <= _Document.PageCount)
                             form.Document.Print();
                     }
                     catch
@@ -253,19 +266,19 @@ namespace PdfiumViewer
         private void printToolStripMenuItem_Click(object sender, EventArgs e)
         {
             using (var form = new PrintDialog())
-            using (var document = _document.CreatePrintDocument(DefaultPrintMode))
+            using (var document = _Document.CreatePrintDocument(DefaultPrintMode))
             {
                 form.AllowSomePages = true;
                 form.Document = document;
                 form.UseEXDialog = true;
                 form.Document.PrinterSettings.FromPage = 1;
-                form.Document.PrinterSettings.ToPage = _document.PageCount;
+                form.Document.PrinterSettings.ToPage = _Document.PageCount;
 
                 if (form.ShowDialog(FindForm()) == DialogResult.OK)
                 {
                     try
                     {
-                        if (form.Document.PrinterSettings.FromPage <= _document.PageCount)
+                        if (form.Document.PrinterSettings.FromPage <= _Document.PageCount)
                             form.Document.Print();
                     }
                     catch
@@ -291,6 +304,7 @@ namespace PdfiumViewer
             }
         }
 
+        bool _flag = true;
         /// <summary>
         /// 打开指定文档并跳转到指定页
         /// wuhailong
@@ -298,22 +312,28 @@ namespace PdfiumViewer
         /// </summary>
         /// <param name="Path"></param>
         /// <param name="page"></param>
-        public void JumptoPage(string Path,int pPage)
+        public void JumptoPage(int pPage)
         {
-            if (File.Exists(Path))
-            {
-                this.Document?.Dispose();
-                this.Document = PdfDocument.Load(this, Path);
-                _page.Text = pPage.ToString();
-                int page;
-                if (int.TryParse(_page.Text, out page))
-                    this.Renderer.Page = page - 1;
-            }
+            FitPage(PdfViewerZoomMode.FitHeight);
+            _flag = false;
+            //_page.Text = pPage.ToString();
+            //int page;
+            //if (int.TryParse(_page.Text, out page))
+            this.Renderer.Page = pPage - 1;
+            
+        }
+
+        private void FitPage(PdfViewerZoomMode zoomMode)
+        {
+            int page = this.Renderer.Page;
+            this.ZoomMode = zoomMode;
+            this.Renderer.Zoom = 1;
+            this.Renderer.Page = page;
         }
 
         public int GetPage()
         {
-            return this.Renderer.Page + 1;
+            return _currPage;
         }
 
 
@@ -378,11 +398,30 @@ namespace PdfiumViewer
 
         private void _page_TextChanged(object sender, EventArgs e)
         {
-            if (_rember != null)
+            if (_flag && _Document != null && _rember != null && _sizechange)
             {
+                _currPage = Renderer.Page+1;
+                FitPage(PdfViewerZoomMode.FitHeight);
                 _rember.Rember();
             }
+            _flag = true;
+        }
 
+        int _currPage = 1;
+        bool _sizechange = true;
+        private void PdfViewer_SizeChanged(object sender, EventArgs e)
+        {
+            int page = _rember.GetPage();
+            if (_sizechange && page != 1)
+            {
+                _sizechange = false;
+                _currPage = this.Renderer.Page;
+                this.Renderer.Page = page;
+            }
+            else
+            {
+                _sizechange = true;
+            }
         }
     }
 }

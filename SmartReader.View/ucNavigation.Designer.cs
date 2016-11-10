@@ -170,13 +170,13 @@
             this.添加分组ToolStripMenuItem,
             this.添加文献ToolStripMenuItem});
             this.cms.Name = "cms";
-            this.cms.Size = new System.Drawing.Size(153, 70);
+            this.cms.Size = new System.Drawing.Size(125, 48);
             this.cms.Opening += new System.ComponentModel.CancelEventHandler(this.cms_Opening);
             // 
             // 添加分组ToolStripMenuItem
             // 
             this.添加分组ToolStripMenuItem.Name = "添加分组ToolStripMenuItem";
-            this.添加分组ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.添加分组ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.添加分组ToolStripMenuItem.Text = "添加分组";
             this.添加分组ToolStripMenuItem.Visible = false;
             this.添加分组ToolStripMenuItem.Click += new System.EventHandler(this.添加分组ToolStripMenuItem_Click);
@@ -184,7 +184,7 @@
             // 添加文献ToolStripMenuItem
             // 
             this.添加文献ToolStripMenuItem.Name = "添加文献ToolStripMenuItem";
-            this.添加文献ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.添加文献ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.添加文献ToolStripMenuItem.Text = "添加文献";
             this.添加文献ToolStripMenuItem.Visible = false;
             this.添加文献ToolStripMenuItem.Click += new System.EventHandler(this.添加文献ToolStripMenuItem_Click);
@@ -198,6 +198,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "ucNavigation";
             this.Size = new System.Drawing.Size(1124, 701);
+            this.SizeChanged += new System.EventHandler(this.ucNavigation_SizeChanged);
             this.sc_container.Panel1.ResumeLayout(false);
             this.sc_container.ResumeLayout(false);
             this.sc_menu.Panel1.ResumeLayout(false);

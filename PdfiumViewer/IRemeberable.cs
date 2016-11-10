@@ -7,5 +7,7 @@ namespace PdfiumViewer
     public interface IRemeberPagable
     {
         void Rember();
+        int GetPage();
+        //Literature GetLiterature();
     }
 }

@@ -13,58 +13,89 @@ namespace SmartReader.View
 {
     public partial class ucPDFium : UserControl, IRemeberPagable
     {
-        PdfViewer viewer;
-        Literature literature;  
+        //PdfViewer viewer;
+        Literature literature;
+
+        public Literature Literature
+        {
+            get
+            {
+                return literature;
+            }
+
+            set
+            {
+                literature = value;
+            }
+        }
+
         public ucPDFium()
         {
             InitializeComponent();
-            viewer = new PdfViewer(this);
-            viewer.Parent = this;
-            viewer.Dock = DockStyle.Fill;
+            //viewer = new PdfViewer(this);
+            //viewer.Parent = this;
+            //viewer.Dock = DockStyle.Fill;
         }
 
         public ucPDFium(string path)
         {
             InitializeComponent();
-            viewer = new PdfViewer(this);
-            viewer.Parent = this;
-            viewer.Dock = DockStyle.Fill;
-            this.viewer.LoadFile(path);
+            //viewer = new PdfViewer(this);
+            //viewer.Parent = this;
+            //viewer.Dock = DockStyle.Fill;
+            //this.viewer.LoadFile(path);
         }
 
         public ucPDFium(string path,int page)
         {
             InitializeComponent();
-            viewer = new PdfViewer(this);
-            viewer.Parent = this;
-            viewer.Dock = DockStyle.Fill;
-            this.viewer.JumptoPage(path, page);
+            //viewer = new PdfViewer(this);
+            //viewer.Parent = this;
+            //viewer.Dock = DockStyle.Fill;
+            //this.viewer.JumptoPage(path, page);
         }
 
         public ucPDFium(Literature l)
         {
             InitializeComponent();
-            literature = l;
-            viewer = new PdfViewer(this);
-            viewer.Parent = this;
-            viewer.Dock = DockStyle.Fill;
-            this.viewer.JumptoPage(literature.GetSource(), int.Parse(literature.GetProgress()));
+            Literature = l;
+            
+            //viewer = new PdfViewer(this);
+            //viewer.Dock = DockStyle.Fill;
+            //viewer.Parent = this;
+            this.viewer.LoadFile(Literature.GetSource());
+            //viewer.Dock = DockStyle.Fill;
+            
         }
 
         public void Rember()
         {
-            if (literature!=null&& viewer!=null)
+            if (Literature != null && viewer != null&& viewer._Document!=null)
             {
-                literature = new Literature(literature.GetTitle(), DateTime.Now.ToString("yyyy-MM-dd HH:mm"), viewer.GetPage().ToString(), literature.GetParent(), literature.GetSource());
-                LiteratureController _controller = new LiteratureController(literature);
+                Literature = new Literature(Literature.GetTitle(), DateTime.Now.ToString("yyyy-MM-dd HH:mm"), viewer.GetPage().ToString(), Literature.GetParent(), Literature.GetSource());
+                LiteratureController _controller = new LiteratureController(Literature);
                 _controller.Update();
             }
-            
         }
 
         private void pdfViewer1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void ucPDFium_Load(object sender, EventArgs e)
+        {
+            //this.viewer.JumptoPage(int.Parse(literature.GetProgress()));
+            //this.viewer.JumptoPage(literature.GetSource(), int.Parse(literature.GetProgress()));
+        }
+
+        public int GetPage()
+        {
+            if (literature!=null)
+            {
+                return int.Parse(literature.GetProgress());
+            }
+            return 1;
         }
     }
 }
