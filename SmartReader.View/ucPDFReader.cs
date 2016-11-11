@@ -7,21 +7,24 @@ using System.Text;
 using System.Windows.Forms;
 using CefSharp.WinForms;
 using CefSharp;
+using SmartReader.Core.Controller.Service;
+
 namespace SmartReader.View
 {
     public partial class ucPDFReader : UserControl
     {
-        
+        WebView Browser;
         public ucPDFReader()
         {
             try
             {
                 InitializeComponent();
                 string path = Application.StartupPath + @"\PDFJSInNet\web\viewer.html";
-                WebView Browser = new WebView();
+                Browser = new WebView();
                 Browser.Address = path;
                 Browser.Parent = this;
                 Browser.Dock = DockStyle.Fill;
+                RegeistObj();
             }
             catch (Exception ex)
             {
@@ -30,16 +33,21 @@ namespace SmartReader.View
            
         }
 
+        public void RegeistObj()
+        {
+            Browser.RegisterJsObject("callbackObj",  CallbackObjectForJs.GetInstance());
+        }
+
         public ucPDFReader(string path)
         {
             try
             {
                 InitializeComponent();
-                //string path = Application.StartupPath + @"\PDFJSInNet\web\viewer.html";
                 WebView Browser = new WebView();
-                Browser.Address = path;
+                Browser.Address = string.Format(Application.StartupPath + @"\PDFJSInNet\web\viewer.html?file={0}", path);
                 Browser.Parent = this;
                 Browser.Dock = DockStyle.Fill;
+                RegeistObj();
             }
             catch (Exception ex)
             {

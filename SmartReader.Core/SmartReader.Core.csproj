@@ -73,6 +73,7 @@
     <Compile Include="Controller\IController.cs" />
     <Compile Include="Controller\ICURDable.cs" />
     <Compile Include="Controller\LiteratureController.cs" />
+    <Compile Include="Controller\Service\CallbackObjectForJs.cs" />
     <Compile Include="Controller\Service\DirectoryService.cs" />
     <Compile Include="Controller\Service\FileService.cs" />
     <Compile Include="Controller\Service\IService.cs" />

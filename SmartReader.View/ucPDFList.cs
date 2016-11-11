@@ -7,6 +7,7 @@ using System.Text;
 using System.Windows.Forms;
 using SmartReader.Core.Controller;
 using SmartReader.Core.Model;
+using SmartReader.Core.Controller.Service;
 
 namespace SmartReader.View
 {
@@ -57,9 +58,14 @@ namespace SmartReader.View
             string parent = dgv_info.SelectedRows[0].Cells["parent"].Value.ToString();
             string lRTime = dgv_info.SelectedRows[0].Cells["lRTime"].Value.ToString();
             int Progress = int.Parse(dgv_info.SelectedRows[0].Cells["Progress"].Value.ToString());
-            Literature literature = new Literature(title,lRTime,Progress.ToString(),parent,source);
-            ucPDFium control = new ucPDFium(literature);
-            container.SetItem(control);
+            Literature _literature = new Literature(title,lRTime,Progress.ToString(),parent,source);
+            //ucPDFium _control = new ucPDFium(_literature);
+            CallbackObjectForJs _callbackObj = CallbackObjectForJs.GetInstance();
+            _callbackObj.DocPath =  _literature.GetSource();
+            ucPDFReader _control = new ucPDFReader();
+            //ucPDFReader _control = new ucPDFReader("../../doc/09.pdf");
+            container.SetItem(_control);
+           
         }
     }
 }

@@ -26,7 +26,10 @@
 
 //var DEFAULT_URL = '信管网信息系统项目管理师论文精编(2014上半年版).pdf';
 //var DEFAULT_URL = 'http://mozilla.github.io/pdf.js/web/compressed.tracemonkey-pldi-09.pdf';
-var DEFAULT_URL = '';
+var DEFAULT_URL = callbackObj.getDocment();
+callbackObj.showMessage(DEFAULT_URL);
+//PDFViewerApplication.open(DEFAULT_URL);
+
 var DEFAULT_SCALE = 'auto';
 var DEFAULT_SCALE_DELTA = 1.1;
 var UNKNOWN_SCALE = 0;

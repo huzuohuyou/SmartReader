@@ -28,14 +28,25 @@ namespace SmartReader.View
             tv_menu.ExpandAll();
         }
 
-        private void btn_expend_Click(object sender, EventArgs e)
+        private void Fold()
         {
-            sc_container.SplitterDistance= 18;
+            sc_container.SplitterDistance = 18;
             sc_menu.SplitterDistance = 102;
-           
+
             tv_menu.Visible = false;
             btn_expend.Visible = false;
             btn_Fold.Visible = true;
+        }
+
+        private void btn_expend_Click(object sender, EventArgs e)
+        {
+            Fold();
+            //sc_container.SplitterDistance= 18;
+            //sc_menu.SplitterDistance = 102;
+           
+            //tv_menu.Visible = false;
+            //btn_expend.Visible = false;
+            //btn_Fold.Visible = true;
         }
 
         private void btn_Fold_Click(object sender, EventArgs e)
@@ -58,7 +69,7 @@ namespace SmartReader.View
                 {
                     control = new ucPDFReader();
                 }
-                if (tv_menu.SelectedNode.Name == "node_ium")
+                else if (tv_menu.SelectedNode.Name == "node_ium")
                 {
                     control = new ucPDFium();
                 }
@@ -193,6 +204,7 @@ namespace SmartReader.View
 
         public void SetItem(UserControl uc)
         {
+            Fold();
             sc_container.Panel2.Controls.Clear();
             uc.Dock = DockStyle.Fill;
             sc_container.Panel2.Controls.Add(uc);
