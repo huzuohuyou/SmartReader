@@ -5,49 +5,49 @@
     </assembly>
     <members>
         <member name="T:SmartReader.Util.Fakes.ShimJSHelper">
-            <summary>Shim type of SmartReader.Util.JSHelper</summary>
+            <summary>SmartReader.Util.JSHelper 的填充码类型</summary>
         </member>
         <member name="M:SmartReader.Util.Fakes.ShimJSHelper.#ctor">
-            <summary>Initializes a new shim instance</summary>
+            <summary>初始化新的填充码实例</summary>
         </member>
         <member name="M:SmartReader.Util.Fakes.ShimJSHelper.#ctor(SmartReader.Util.JSHelper)">
-            <summary>Initializes a new shim for the given instance</summary>
+            <summary>初始化给定实例的新填充码</summary>
         </member>
         <member name="T:SmartReader.Util.Fakes.ShimJSHelper.AllInstances">
-            <summary>Define shims for all instances members</summary>
+            <summary>为所有实例成员定义填充码</summary>
         </member>
         <member name="M:SmartReader.Util.Fakes.ShimJSHelper.BehaveAsCurrent">
-            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+            <summary>为已填充的类型的所有方法分配“Current”行为</summary>
         </member>
         <member name="M:SmartReader.Util.Fakes.ShimJSHelper.BehaveAsNotImplemented">
-            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+            <summary>为已填充的类型的所有方法分配“NotImplemented”行为</summary>
         </member>
         <member name="P:SmartReader.Util.Fakes.ShimJSHelper.Behavior">
-            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+            <summary>为已填充的类型的所有方法分配行为</summary>
         </member>
         <member name="P:SmartReader.Util.Fakes.ShimJSHelper.Constructor">
-            <summary>Sets the shim of JSHelper.JSHelper()</summary>
+            <summary>设置 JSHelper.JSHelper() 的 填充码</summary>
         </member>
         <member name="P:SmartReader.Util.Fakes.ShimJSHelper.ExecuteScriptStringString">
-            <summary>Sets the shim of JSHelper.ExecuteScript(String expression, String code)</summary>
+            <summary>设置 JSHelper.ExecuteScript(String expression, String code) 的 填充码</summary>
         </member>
         <member name="T:SmartReader.Util.Fakes.StubJSHelper">
-            <summary>Stub type of SmartReader.Util.JSHelper</summary>
+            <summary>SmartReader.Util.JSHelper 的存根类型</summary>
         </member>
         <member name="M:SmartReader.Util.Fakes.StubJSHelper.#ctor">
-            <summary>Initializes a new instance</summary>
+            <summary>初始化新实例</summary>
         </member>
         <member name="P:SmartReader.Util.Fakes.StubJSHelper.CallBase">
-            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+            <summary>获取或设置一个值，该值指示是否应调用基方法而不调用回退行为</summary>
         </member>
         <member name="M:SmartReader.Util.Fakes.StubJSHelper.InitializeStub">
-            <summary>Initializes a new instance of type StubJSHelper</summary>
+            <summary>初始化 type StubJSHelper 的新实例</summary>
         </member>
         <member name="P:SmartReader.Util.Fakes.StubJSHelper.InstanceBehavior">
-            <summary>Gets or sets the instance behavior.</summary>
+            <summary>获取或设置实例行为。</summary>
         </member>
         <member name="P:SmartReader.Util.Fakes.StubJSHelper.InstanceObserver">
-            <summary>Gets or sets the instance observer.</summary>
+            <summary>获取或设置实例观察者。</summary>
         </member>
     </members>
 </doc>

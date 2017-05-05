@@ -1,5 +1,0 @@
-D:\GitHub\SmartReader\SmartReader.Core\bin\Release\RemotingObjects.dll
-D:\GitHub\SmartReader\SmartReader.Core\bin\Release\SmartReader.Core.dll
-D:\GitHub\SmartReader\SmartReader.Core\bin\Release\SmartReader.Core.pdb
-D:\GitHub\SmartReader\SmartReader.Core\obj\Release\SmartReader.Core.dll
-D:\GitHub\SmartReader\SmartReader.Core\obj\Release\SmartReader.Core.pdb

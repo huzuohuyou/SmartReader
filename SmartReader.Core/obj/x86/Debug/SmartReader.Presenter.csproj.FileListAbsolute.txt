@@ -1,0 +1,9 @@
+D:\GitHub\SmartReader\SmartReader.Core\obj\x86\Debug\SmartReader.Presenter.csprojResolveAssemblyReference.cache
+D:\GitHub\SmartReader\SmartReader.Core\bin\Debug\RemotingObjects.dll
+D:\GitHub\SmartReader\SmartReader.Core\bin\Debug\SmartReader.Presenter.dll
+D:\GitHub\SmartReader\SmartReader.Core\bin\Debug\SmartReader.Presenter.pdb
+D:\GitHub\SmartReader\SmartReader.Core\bin\Debug\Newtonsoft.Json.Net20.dll
+D:\GitHub\SmartReader\SmartReader.Core\bin\Debug\SmartReader.Model.dll
+D:\GitHub\SmartReader\SmartReader.Core\bin\Debug\SmartReader.Model.pdb
+D:\GitHub\SmartReader\SmartReader.Core\obj\x86\Debug\SmartReader.Presenter.dll
+D:\GitHub\SmartReader\SmartReader.Core\obj\x86\Debug\SmartReader.Presenter.pdb

@@ -68,21 +68,7 @@ namespace SmartReader.View
                 if (tv_menu.SelectedNode.Name == "node_reader")
                 {
                     control = new ucPDFReader();
-                }
-                else if (tv_menu.SelectedNode.Name == "node_ium")
-                {
-                    control = new ucPDFium();
-                }
-                else if (tv_menu.SelectedNode.Parent != null && tv_menu.SelectedNode.Parent.Name == "node_xxdy")
-                {//.Name == "node_hsz" || tv_menu.SelectedNode.Name == "node_xxdy"
-                    string _parent = tv_menu.SelectedNode.Text;
-                    control = new ucPDFList(_parent,this);
-                }
-                else if (tv_menu.SelectedNode.Name == "node_google")
-                {
-                    control = new ucGoogle();
-                }
-                else if (tv_menu.SelectedNode.Name == "node_open")
+                }else if (tv_menu.SelectedNode.Name == "node_open")
                 {
                     OpenFileDialog ofd = new OpenFileDialog();
                     ofd.Filter = "网页|*.html";

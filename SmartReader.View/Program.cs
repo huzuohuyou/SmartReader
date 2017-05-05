@@ -14,7 +14,7 @@ namespace SmartReader.View
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmWHLBrowser());
+            Application.Run(new frmMain());
         }
     }
 }

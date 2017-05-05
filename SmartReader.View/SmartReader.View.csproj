@@ -109,20 +109,20 @@
     <Compile Include="frmScreenShot.Designer.cs">
       <DependentUpon>frmScreenShot.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmWHLBrowser.cs">
+    <Compile Include="frmMain.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmWHLBrowser.Designer.cs">
-      <DependentUpon>frmWHLBrowser.cs</DependentUpon>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
     <Compile Include="LifeSpanHandler.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ucGoogle.cs">
+    <Compile Include="ucDeskTop.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ucGoogle.Designer.cs">
-      <DependentUpon>ucGoogle.cs</DependentUpon>
+    <Compile Include="ucDeskTop.Designer.cs">
+      <DependentUpon>ucDeskTop.cs</DependentUpon>
     </Compile>
     <Compile Include="ucGroup.cs">
       <SubType>UserControl</SubType>
@@ -130,29 +130,11 @@
     <Compile Include="ucGroup.Designer.cs">
       <DependentUpon>ucGroup.cs</DependentUpon>
     </Compile>
-    <Compile Include="uciTextSharp.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="uciTextSharp.Designer.cs">
-      <DependentUpon>uciTextSharp.cs</DependentUpon>
-    </Compile>
     <Compile Include="ucNavigation.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="ucNavigation.Designer.cs">
       <DependentUpon>ucNavigation.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ucPDFium.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="ucPDFium.Designer.cs">
-      <DependentUpon>ucPDFium.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ucPDFList.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="ucPDFList.Designer.cs">
-      <DependentUpon>ucPDFList.cs</DependentUpon>
     </Compile>
     <Compile Include="ucPDFReader.cs">
       <SubType>UserControl</SubType>
@@ -178,8 +160,8 @@
     <EmbeddedResource Include="frmScreenShot.resx">
       <DependentUpon>frmScreenShot.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmWHLBrowser.resx">
-      <DependentUpon>frmWHLBrowser.cs</DependentUpon>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -191,23 +173,14 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="ucGoogle.resx">
-      <DependentUpon>ucGoogle.cs</DependentUpon>
+    <EmbeddedResource Include="ucDeskTop.resx">
+      <DependentUpon>ucDeskTop.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ucGroup.resx">
       <DependentUpon>ucGroup.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="uciTextSharp.resx">
-      <DependentUpon>uciTextSharp.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="ucNavigation.resx">
       <DependentUpon>ucNavigation.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ucPDFium.resx">
-      <DependentUpon>ucPDFium.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ucPDFList.resx">
-      <DependentUpon>ucPDFList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ucPDFReader.resx">
       <DependentUpon>ucPDFReader.cs</DependentUpon>
@@ -1282,22 +1255,16 @@
     <Content Include="用法.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\PdfiumViewer\PdfiumViewer.csproj">
-      <Project>{438914b6-5d1c-482c-b942-5c0e057eef6f}</Project>
-      <Name>PdfiumViewer</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\SmartReader.Core\SmartReader.Core.csproj">
+    <ProjectReference Include="..\SmartReader.Core\SmartReader.Presenter.csproj">
       <Project>{e83b8825-4385-42d7-bf0f-ebd8b33a5464}</Project>
-      <Name>SmartReader.Core</Name>
+      <Name>SmartReader.Presenter</Name>
     </ProjectReference>
     <ProjectReference Include="..\SmartReader.Util\SmartReader.Util.csproj">
       <Project>{4d6a63fa-28a7-47d7-b035-18a09be60363}</Project>
       <Name>SmartReader.Util</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Utils\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

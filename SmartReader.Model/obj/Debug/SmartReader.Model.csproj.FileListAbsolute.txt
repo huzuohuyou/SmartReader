@@ -1,0 +1,5 @@
+D:\GitHub\SmartReader\SmartReader.Model\bin\Debug\SmartReader.Model.dll
+D:\GitHub\SmartReader\SmartReader.Model\bin\Debug\SmartReader.Model.pdb
+D:\GitHub\SmartReader\SmartReader.Model\obj\Debug\SmartReader.Model.dll
+D:\GitHub\SmartReader\SmartReader.Model\obj\Debug\SmartReader.Model.pdb
+D:\GitHub\SmartReader\SmartReader.Model\obj\Debug\SmartReader.Model.csprojResolveAssemblyReference.cache

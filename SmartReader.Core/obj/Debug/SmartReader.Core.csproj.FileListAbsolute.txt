@@ -1,5 +1,0 @@
-D:\project\CefSharp\SmartReader.Core\bin\Debug\SmartReader.Core.dll
-D:\project\CefSharp\SmartReader.Core\bin\Debug\SmartReader.Core.pdb
-D:\project\CefSharp\SmartReader.Core\obj\Debug\SmartReader.Core.csprojResolveAssemblyReference.cache
-D:\project\CefSharp\SmartReader.Core\obj\Debug\SmartReader.Core.dll
-D:\project\CefSharp\SmartReader.Core\obj\Debug\SmartReader.Core.pdb

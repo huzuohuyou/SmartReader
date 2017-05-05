@@ -8,10 +8,11 @@ using System.Windows.Forms;
 using CefSharp.WinForms;
 using CefSharp;
 using SmartReader.Core.Controller.Service;
+using SmartReader.Presenter;
 
 namespace SmartReader.View
 {
-    public partial class ucPDFReader : UserControl
+    public partial class ucPDFReader : UserControl, IContentView
     {
         WebView Browser;
         public ucPDFReader()

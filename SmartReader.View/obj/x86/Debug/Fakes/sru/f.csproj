@@ -8,7 +8,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>9.0.21022</ProductVersion>
-    <ProjectGuid>1e557f30-aa0f-462b-bbf4-be0efc531043</ProjectGuid>
+    <ProjectGuid>f9e2230e-5c94-45ae-992d-7a02ead5c1ab</ProjectGuid>
     <!-- update GUID here -->
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -63,12 +63,8 @@
       <HintPath>D:\GitHub\SmartReader\SmartReader.View\CefSharp.WinForms.dll</HintPath>
       <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
-    <Reference Include="PdfiumViewer">
-      <HintPath>D:\GitHub\SmartReader\PdfiumViewer\bin\Debug\PdfiumViewer.dll</HintPath>
-      <EmbedInteropTypes>False</EmbedInteropTypes>
-    </Reference>
-    <Reference Include="SmartReader.Core">
-      <HintPath>D:\GitHub\SmartReader\SmartReader.Core\bin\x86\Debug\SmartReader.Core.dll</HintPath>
+    <Reference Include="SmartReader.Presenter">
+      <HintPath>D:\GitHub\SmartReader\SmartReader.Core\bin\Debug\SmartReader.Presenter.dll</HintPath>
       <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
     <Reference Include="System.Data">
@@ -95,16 +91,20 @@
       <HintPath>C:\Windows\Microsoft.NET\Framework\v2.0.50727\System.Xml.dll</HintPath>
       <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
+    <Reference Include="SmartReader.Model">
+      <HintPath>D:\GitHub\SmartReader\SmartReader.Core\bin\Debug\SmartReader.Model.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
     <Reference Include="System.Runtime.Remoting">
       <HintPath>C:\Windows\Microsoft.NET\Framework\v2.0.50727\System.Runtime.Remoting.dll</HintPath>
       <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
     <Reference Include="RemotingObjects">
-      <HintPath>D:\GitHub\SmartReader\SmartReader.Core\bin\x86\Debug\RemotingObjects.dll</HintPath>
+      <HintPath>D:\GitHub\SmartReader\SmartReader.Core\bin\Debug\RemotingObjects.dll</HintPath>
       <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
     <Reference Include="Newtonsoft.Json.Net20">
-      <HintPath>D:\GitHub\SmartReader\SmartReader.Core\bin\x86\Debug\Newtonsoft.Json.Net20.dll</HintPath>
+      <HintPath>D:\GitHub\SmartReader\SmartReader.Core\bin\Debug\Newtonsoft.Json.Net20.dll</HintPath>
       <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
     <Reference Include="Interop.MSScriptControl">
